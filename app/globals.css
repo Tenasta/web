@@ -1,3 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  @apply text-3xl font-bold text-black-400;
+}
+
+#topnav {
+  transition: all 0.5s ease-out;
+  .logo-colour {
+    display: none;
+  }
+  &.sticky {
+    position: fixed;
+    z-index: 99;
+    top: -90px;
+    width: 100%;
+    .logo-colour {
+      display: block;
+    }
+    .logo-white {
+      display: none;
+    }
+    @apply bg-brand-dark-blue;
+    /* transition: top 1s ease; */
+    /* -webkit-transition: all 0.4s ease; */
+    &.sticky-closing {
+      transition: top 0.1s ease;
+    }
+    &.scroll-up {
+      top: 0;
+    }
+    &.scroll-down {
+      top: -90px;
+    }
+  }
+}
+
+.mock-mobile {
+  height: 700px;
+  width: 300px;
+  position: relative;
+}
+.mobile-screen {
+  position: absolute;
+  top: 0;
+  border-radius: 40px 40px 40px 40px;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
+}
+.mobile-content {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.mobile-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919,
+    0px 0px 0px 20px #111;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 11;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* // home button indicator */
+  &:after {
+    bottom: 7px;
+    width: 140px;
+    height: 4px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+
+  /* // frontal camera/speaker frame */
+  &:before {
+    top: 0px;
+    width: 56%;
+    height: 4%;
+    background-color: #1f1f1f;
+    border-radius: 0px 0px 40px 40px;
+  }
+
+  i,
+  b,
+  s,
+  span {
+    position: absolute;
+    display: block;
+    color: transparent;
+  }
+
+  /* // speaker */
+  i {
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 6px);
+    height: 8px;
+    width: 15%;
+    background-color: #101010;
+    border-radius: 8px;
+    box-shadow: inset 0px -3px 3px 0px rgba(256, 256, 256, 0.2);
+  }
+
+  /* // camera */
+  b {
+    left: 10%;
+    top: 0px;
+    transform: translate(180px, 4px);
+    width: 12px;
+    height: 12px;
+    background-color: #101010;
+    border-radius: 12px;
+    box-shadow: inset 0px -3px 2px 0px rgba(256, 256, 256, 0.2);
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #2d4d76;
+      width: 6px;
+      height: 6px;
+      top: 2px;
+      left: 2px;
+      top: 3px;
+      left: 3px;
+      display: block;
+      border-radius: 4px;
+      box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  /* // time */
+  s {
+    top: 50px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: 70px;
+    font-weight: 100;
+    padding-top: 60px;
+  }
+
+  /* // action buttons */
+  span {
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    left: 30px;
+
+    & + span {
+      left: auto;
+      right: 30px;
+    }
+  }
+}
+
+/* Macbook */
+
+.macbook {
+  padding: 2% 2%;
+  margin: 0 auto;
+  max-width: 800px;
+  @media (min-width: 640px) {
+    padding: 4% 6%;
+  }
+}
+
+.screen {
+  background: #000;
+  border-radius: 3% 3% 0.5% 0.5% / 5%;
+  margin: 0 auto;
+  /* for aspect ratio */
+  position: relative;
+  width: 80%;
+}
+
+.screen:before {
+  border: 2px solid #cacacc;
+  border-radius: 3% 3% 0.5% 0.5% / 5%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8) inset,
+    0 0 1px 2px rgba(255, 255, 255, 0.3) inset;
+  content: "";
+  display: block;
+  /* for aspect ratio ~67:100 */
+  padding-top: 67%;
+}
+
+.screen:after {
+  content: "";
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  position: absolute;
+  bottom: 0.75%;
+  left: 0.5%;
+  padding-top: 1%;
+  width: 99%;
+}
+
+.viewport {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 4.3% 3.2%;
+  background: #333;
+}
+
+.base {
+  /* for aspect ratio */
+  position: relative;
+  width: 100%;
+}
+
+.base:before {
+  content: "";
+  display: block;
+  /* for aspect ratio ~33:1000*/
+  padding-top: 3.3%;
+  /* stylin */
+  background: linear-gradient(
+    #eaeced,
+    #edeef0 55%,
+    #fff 55%,
+    #8a8b8f 56%,
+    #999ba0 61%,
+    #4b4b4f 84%,
+    #262627 89%,
+    rgba(0, 0, 0, 0.01) 98%
+  );
+  border-radius: 0 0 10% 10%/ 0 0 50% 50%;
+}
+
+.base::after {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0.8) 0.5%,
+    rgba(0, 0, 0, 0.4) 3.3%,
+    transparent 15%,
+    rgba(255, 255, 255, 0.8) 50%,
+    transparent 85%,
+    rgba(0, 0, 0, 0.4) 96.7%,
+    rgba(255, 255, 255, 0.8) 99.5%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  content: "";
+  height: 53%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.notch {
+  background: #ddd;
+  border-radius: 0 0 7% 7% / 0 0 95% 95%;
+  box-shadow: -5px -1px 3px rgba(0, 0, 0, 0.2) inset,
+    5px -1px 3px rgba(0, 0, 0, 0.2) inset;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -3.5%;
+  z-index: 2;
+  /* for aspect ratio */
+  position: relative;
+  width: 14%;
+}
+
+.notch:before {
+  content: "";
+  display: block;
+  /* for aspect ratio ~1:10 */
+  padding-top: 10%;
+}
+
+/* Screenshot Hover Scroll Additions
+  -------------------------------------------------------------- */
+
+.macbook .viewport {
+  transition: background-position 20s ease;
+  background-position: 0 0;
+  background-size: 100% auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  cursor: pointer;
+}
+
+/* .macbook:hover .viewport {
+    background-position: 0 100%;
+  } */
+
+.macbook .viewport:after {
+  background: radial-gradient(
+    circle at right bottom,
+    transparent 75%,
+    rgba(255, 255, 255, 0.05) 75%,
+    transparent
+  );
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
