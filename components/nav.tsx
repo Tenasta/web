@@ -1,6 +1,60 @@
+"use client";
+
+import _ from "lodash";
+import { MutableRefObject, RefObject, useEffect, useRef } from "react";
+
+const trackTopnav = (el: HTMLElement) => {
+  const setSticky = _.debounce((element, enable) => {
+    if (!enable) {
+      element.classList.add("sticky-closing");
+      setTimeout(() => {
+        element.classList.remove("sticky-closing", "sticky");
+        element.parentElement.style.paddingTop = "0";
+      }, 500);
+    } else {
+      element.classList.add("sticky");
+      element.parentElement.style.paddingTop = "90px";
+    }
+  }, 50);
+
+  let lastScroll = 0;
+
+  const navbarOffset = el.offsetHeight + 5;
+  let navbarOpenedAt = 0;
+
+  document.addEventListener("scroll", function (e) {
+    let currentScroll = window.scrollY;
+    if (currentScroll > navbarOffset) {
+      setSticky(el, true);
+    } else if (currentScroll <= navbarOffset / 2) {
+      setSticky(el, false);
+    }
+
+    if (
+      el.classList.contains("scroll-up") &&
+      currentScroll > navbarOpenedAt + 200
+    ) {
+      el.classList.remove("scroll-up");
+      el.classList.add("scroll-down");
+    } else if (lastScroll > currentScroll) {
+      el.classList.remove("scroll-down");
+      el.classList.add("scroll-up");
+      navbarOpenedAt = currentScroll;
+    }
+    lastScroll = currentScroll;
+  });
+};
+
 export default function Nav({}) {
+  const topNav = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (topNav.current) {
+      trackTopnav(topNav.current);
+    }
+  });
+
   return (
-    <nav id="topnav" className="">
+    <nav id="topnav" className="" ref={topNav}>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
         <div className="flex justify-start lg:w-0 lg:flex-1 flex-shrink-0">
           <a href="/">
