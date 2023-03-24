@@ -1,7 +1,6 @@
-import Header from "@/components/header";
-import "./globals.css";
 import Footer from "@/components/footer";
-
+import Header from "@/components/header";
+import "../globals.css";
 export const metadata = {
   title: "Tenasta Ltd.",
   description: "Tenasta Ltd. - Shaping better digital products &amp; teams",
