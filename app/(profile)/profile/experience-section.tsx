@@ -84,7 +84,7 @@ const items = [
     ],
   },
 ];
-export default function Experience() {
+export default function ExperienceSection() {
   return (
     <div className="py-6  border-b-2 border-gray-300">
       <h3 className="uppercase font-bold text-xl mb-4">Experience</h3>
