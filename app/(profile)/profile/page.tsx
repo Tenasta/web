@@ -4,8 +4,8 @@ import BioSection from "./bio-section";
 import EducationSection from "./education-section";
 export default function Profile() {
   return (
-    <div className="max-w-5xl mx-auto py-12">
-      <div className="px-6 drop-shadow-2xl bg-gray-50 border border-gray-100">
+    <div className="profile-container">
+      <div className="profile-section">
         <BioSection />
         <ProfileSection />
         <ExperienceSection />

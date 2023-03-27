@@ -22,6 +22,10 @@ strong {
   font-weight: 700;
 }
 
+a {
+  @apply text-blue-400 underline;
+}
+
 #topnav {
   transition: all 0.5s ease-out;
   .logo-colour {

@@ -18,3 +18,40 @@ p {
     @apply text-gray-800;
   }
 }
+
+.profile-container {
+  @apply max-w-5xl mx-auto py-12;
+  @screen print {
+    @apply max-w-none mx-0 p-0;
+  }
+}
+
+.profile-section {
+  @apply px-6 drop-shadow-2xl bg-gray-50 border border-gray-100;
+  @screen print {
+    @apply drop-shadow-none bg-white border-none;
+    padding: theme(spacing.4) theme(spacing.16) !important;
+    height: 100vh !important;
+  }
+}
+
+.experience {
+  .grid {
+    > div {
+      @screen print {
+        @apply pt-6 gap-x-0;
+      }
+    }
+  }
+  h3 {
+    @screen print {
+      @apply mb-0;
+    }
+  }
+  .details p {
+    @apply mb-2;
+    @screen print {
+      @apply mb-1 text-sm;
+    }
+  }
+}

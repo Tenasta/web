@@ -1,8 +1,8 @@
 export default function ProfileSection() {
   return (
-    <div className="py-6  border-b-2 border-gray-300">
-      <div className="md:grid md:grid-cols-3">
-        <div className="md:col-span-2 mb-4">
+    <section className="pb-4 md:pt-6 md:pb-6 border-b-2 border-gray-300">
+      <div className="a4:grid a4:grid-cols-3">
+        <div className="a4:col-span-2 mb-4">
           <h3 className="uppercase font-bold text-xl mb-4">Profile</h3>
           <p className=" leading-7 mb-2">
             I am a hands on technical leader with a broad skillset and
@@ -18,21 +18,25 @@ export default function ProfileSection() {
             and having a positive impact on products and people.
           </p>
         </div>
-        <div className="md:border-l-2 md:border-gray-300 md:pl-4 md:ml-4 text-gray-600">
-          <div className="grid grid-cols-3 gap-x-8 gap-y-4">
-            <div className="text-sm">Frontend</div>
-            <div className="col-span-2">React / Next / Vue / JS</div>
-            <div className="text-sm">Backend</div>
-            <div className="col-span-2">Node.js / TypeScript / PHP</div>
-            <div className="text-sm">Database</div>
-            <div className="col-span-2">PostgreSQL / MySQL / NoSQL</div>
-            <div className="text-sm">Other</div>
-            <div className="col-span-2">
+        <div className="md:border-l-2 md:border-gray-300 md:pl-4 a4:ml-4 a4:pt-4 md:pt-0 text-gray-600">
+          <div className="flex flex-col gap-y-2 md:grid md:grid-cols-3 md:gap-x-2 md:gap-y-4 text-sm">
+            <div className="font-bold">Frontend</div>
+            <div className="md:col-span-2">
+              React / Next / Vue / JS <p className="text-xs">(10+ years)</p>
+            </div>
+            <div className="font-bold">Backend</div>
+            <div className="md:col-span-2">
+              Node.js / TypeScript / PHP <p className="text-xs">(10+ years)</p>
+            </div>
+            <div className="font-bold">Database</div>
+            <div className="md:col-span-2">PostgreSQL / MySQL / NoSQL</div>
+            <div className="font-bold">Other</div>
+            <div className="md:col-span-2">
               AWS / Docker / Digital Ocean / IaC / CI/CD / gRPC / REST / GraphQL
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

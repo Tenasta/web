@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 const items = [
   {
     title: "Tech Lead",
@@ -86,11 +88,11 @@ const items = [
 ];
 export default function ExperienceSection() {
   return (
-    <div className="py-6  border-b-2 border-gray-300">
+    <section className="experience py-6  border-b-2 border-gray-300">
       <h3 className="uppercase font-bold text-xl mb-4">Experience</h3>
-      <div className="grid grid-cols-4 gap-x-4 gap-y-8">
-        {items.map((item) => (
-          <>
+      <div className="grid grid-cols-4 gap-x-2 gap-y-8">
+        {items.map((item, index) => (
+          <Fragment key={index}>
             <div>
               <h4 className="text-sm mb-2">{item.title}</h4>
               <p className="">{item.date}</p>
@@ -99,14 +101,16 @@ export default function ExperienceSection() {
               <h4 className="mb-2">{item.company}</h4>
               <p className="text-xs">({item.location})</p>
             </div>
-            <div className="col-span-2">
-              {item.description.map((desc) => (
-                <p className="mb-2">{desc}</p>
+            <div className="details col-span-2">
+              {item.description.map((desc, i) => (
+                <p className="" key={i}>
+                  {desc}
+                </p>
               ))}
             </div>
-          </>
+          </Fragment>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
