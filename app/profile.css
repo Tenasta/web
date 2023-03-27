@@ -42,7 +42,7 @@ a {
   .grid {
     > div {
       @screen print {
-        @apply pt-6 gap-x-0;
+        @apply pt-4 gap-x-0;
       }
     }
   }

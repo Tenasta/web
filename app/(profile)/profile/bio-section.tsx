@@ -16,8 +16,8 @@ export default function BioSection() {
           <p className="mt-1 text-gray-500 mb-4">Technical Leader</p>
         </div>
       </div>
-      <div className="md:border-l-2 border-gray-300 a4:pl-4 md:ml-4 text-gray-600">
-        <div className="flex flex-row-reverse justify-center a4:flex-row a4:justify-end a4:mb-4">
+      <div className="md:border-l-2 border-gray-300 a4:pl-4 a4:pt-4 md:ml-4 text-gray-600 break-all">
+        <div className="flex flex-row-reverse justify-center a4:flex-row a4:justify-end a4:mb-4 ">
           <p>
             <a target="_blank" href="mailto:nick@tenasta.com">
               nick@tenasta.com

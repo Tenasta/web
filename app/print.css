@@ -6,10 +6,18 @@
   body {
     -webkit-print-color-adjust: exact !important;
     color-adjust: exact !important;
-    color: #3c3f4c !important;
+    color: #000 !important;
   }
 
   html {
     font-size: 12px !important;
+    background-color: #fff !important;
+  }
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    color: #000 !important;
   }
 }

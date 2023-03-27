@@ -15,7 +15,7 @@ module.exports = {
     extend: {
       screens: {
         print: { raw: "print" },
-        a4: '600px',
+        a4: '595px',
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
