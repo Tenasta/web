@@ -19,6 +19,9 @@ p {
   }
 }
 
+a {
+  @apply text-blue-400 underline;
+}
 .profile-container {
   @apply max-w-5xl mx-auto py-12;
   @screen print {
