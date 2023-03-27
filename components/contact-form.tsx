@@ -6,14 +6,15 @@ import { fadeIn } from "react-animations";
 const FadeIn = styled.div`
   animation: 2s ${keyframes`${fadeIn}`} 1;
 `;
-const FORM_ENDPOINT =
-  "https://qdunx5lfck.execute-api.eu-west-2.amazonaws.com/dev/email/send"; // TODO - fill on the later step
+// todo - move the serverless framework logic on this endpoint to this repo or as a nextjs api endpoint
+const FORM_ENDPOINT = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT;
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    if (!FORM_ENDPOINT) throw new Error("No form endpoint provided."); // fail loudly
 
     const inputs = e.target.elements;
 
