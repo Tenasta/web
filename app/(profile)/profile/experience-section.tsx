@@ -2,6 +2,16 @@ import { Fragment } from "react";
 
 const items = [
   {
+    title: "Principal Engineer",
+    date: "April 23 - Present",
+    company: "Footium",
+    location: "Remote",
+    description: [
+      "I came in to help a venture-backed startup move from a credible seed prototype to a shipped & viable product. Over ~3 years, I helped convert high ambition and accumulated complexity into repeatable execution and measurable outcomes: revenue growth, user growth, and strong retention; building momentum that supported a further fundraising round.",
+      "I re-established engineering momentum by introducing pragmatic foundations for sustainable delivery: multi-environment IaC, CI/CD, release management, observability, and clear operational ownership - enabling the team to ship with increasing cadence and confidence. I led platform and product systems to deliver real-time backend services at scale, revenue driving features, and V2 migrations of critical systems. I took responsibility for data & analytics foundations - building event-based product telemetry and revenue measurement tooling to improve decision making and business visibility. I partnered closely with founders through launch and delivery trade-offs to sustain a high-cadence ship/test/iterate loop without compromising production stability.",
+    ],
+  },
+  {
     title: "Tech Lead",
     date: "Feb 23 - April 23",
     company: "Glaciera",
