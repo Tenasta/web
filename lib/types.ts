@@ -57,6 +57,7 @@ export interface ProjectExtended {
   duration: string;
   impact: string[];
   tags: string[];
+  logo?: string;
   featured?: boolean;
 }
 
@@ -67,6 +68,7 @@ export interface ProjectPreview {
   category: string;
   impact: string;
   tags: string[];
+  logo?: string;
   featured?: boolean;
 }
 
@@ -109,5 +111,12 @@ export interface SiteConstants {
   cta: {
     bookACall: string;
     discuss: string;
+  };
+  portfolio: {
+    badge: string;
+    title: string;
+    description: string;
+    metaTitle: string;
+    metaDescription: string;
   };
 }

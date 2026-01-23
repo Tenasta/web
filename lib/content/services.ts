@@ -8,15 +8,15 @@ export const services: ServiceExtended[] = [
     title: "Readiness Audit",
     subtitle: "Know where you stand",
     duration: "1-2 weeks",
-    price: "From £4,000",
+    price: "Price on request",
     description:
       "A comprehensive technical health check that gives you clarity on your product, codebase, and team processes. Perfect before raising, launching, or hiring.",
     whatYouGet: [
       "Deep-dive codebase and architecture review",
       "Team velocity and process assessment",
-      "Risk identification and prioritization",
+      "Risk identification and prioritisation",
       "Technical debt inventory",
-      "90-day prioritized action roadmap",
+      "Prioritised action roadmap",
       "60-minute strategy session to discuss findings",
     ],
     idealFor: [
@@ -33,7 +33,7 @@ export const services: ServiceExtended[] = [
     title: "Embedded Sprint",
     subtitle: "Hands-on problem solving",
     duration: "2-8 weeks",
-    price: "From £12,000/mo",
+    price: "Price on request",
     description:
       "I join your team as a drop-in technical lead. I understand context fast, unblock your developers, ship features, and establish better processes—without the overhead of a full-time hire.",
     whatYouGet: [
@@ -59,7 +59,7 @@ export const services: ServiceExtended[] = [
     title: "Launch Support",
     subtitle: "Ship with confidence",
     duration: "2-4 weeks",
-    price: "From £6,500",
+    price: "Price on request",
     description:
       "End-to-end launch preparation and support. I ensure your product is production-ready, create your launch runbook, and provide on-call support when you go live.",
     whatYouGet: [
@@ -73,7 +73,7 @@ export const services: ServiceExtended[] = [
     idealFor: [
       "First major product launch",
       "Big marketing push incoming",
-      "Enterprise customer going live",
+      "VIP customer going live",
       "Regulatory compliance deadline",
     ],
     cta: "Plan Your Launch",

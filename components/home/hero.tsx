@@ -5,29 +5,29 @@ import { siteConstants } from "@/lib/content";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative flex min-h-[90vh] items-center overflow-hidden">
       {/* Subtle background with minimal grid */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95" />
-      <div className="absolute inset-0 bg-grid opacity-40" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
+      <div className="bg-grid absolute inset-0 opacity-40" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
       {/* Glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/5 blur-3xl pointer-events-none" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="container-wide relative z-10">
-        <div className="grid lg:grid-cols-[1fr,auto] gap-12 items-center">
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr,auto]">
           <div className="max-w-3xl">
             {/* Status badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary border border-border mb-8 fade-in-up">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
+            <div className="fade-in-up mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1.5">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
+              <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
                 Available for Q1 engagements
               </span>
             </div>
 
             {/* Headline */}
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight mb-6 fade-in-up"
+              className="fade-in-up mb-6 text-4xl font-semibold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl"
               style={{ animationDelay: "0.1s" }}
             >
               Your technical blind spots,
@@ -36,25 +36,26 @@ export function Hero() {
 
             {/* Subhead */}
             <p
-              className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-4 fade-in-up"
+              className="fade-in-up mb-4 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
               style={{ animationDelay: "0.2s" }}
             >
-              Drop-in technical co-pilot for early-stage founders. I understand
-              your context fast, unblock your team, and make your product
-              work—without the overhead of a full-time hire.
+              I help founders ship and evolve real products when it counts —
+              while retaining control and building momentum.
             </p>
 
             {/* Proof line */}
             <p
-              className="text-sm text-muted-foreground mb-10 fade-in-up"
+              className="fade-in-up mb-10 flex gap-2 text-sm text-muted-foreground"
               style={{ animationDelay: "0.3s" }}
             >
               <span className="font-mono text-primary">
                 {siteConstants.credentials.heroLine1}
-              </span>{" · "}
+              </span>
+              {" · "}
               <span className="font-mono text-primary">
                 {siteConstants.credentials.heroLine2}
-              </span>{" · "}
+              </span>
+              {" · "}
               <span className="font-mono text-primary">
                 {siteConstants.credentials.heroLine3}
               </span>
@@ -62,13 +63,13 @@ export function Hero() {
 
             {/* CTAs */}
             <div
-              className="flex flex-col sm:flex-row gap-4 fade-in-up"
+              className="fade-in-up flex flex-col gap-4 sm:flex-row"
               style={{ animationDelay: "0.4s" }}
             >
               <Button variant="hero" size="xl" asChild>
                 <Link href="/contact">
                   Request a Readiness Audit
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
@@ -81,13 +82,13 @@ export function Hero() {
           <div className="hidden lg:block">
             <div className="relative w-72 xl:w-80">
               {/* Terminal-like decoration */}
-              <div className="border border-border/50 rounded-lg bg-card/50 backdrop-blur p-4 overflow-hidden">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-destructive/50" />
-                  <div className="w-3 h-3 rounded-full bg-accent/50" />
-                  <div className="w-3 h-3 rounded-full bg-primary/50" />
+              <div className="overflow-hidden rounded-lg border border-border/50 bg-card/50 p-4 backdrop-blur">
+                <div className="mb-4 flex items-center gap-2">
+                  <div className="h-3 w-3 rounded-full bg-destructive/50" />
+                  <div className="h-3 w-3 rounded-full bg-accent/50" />
+                  <div className="h-3 w-3 rounded-full bg-primary/50" />
                 </div>
-                <div className="font-mono text-xs space-y-2 text-muted-foreground">
+                <div className="space-y-2 font-mono text-xs text-muted-foreground">
                   <p>
                     <span className="text-primary">→</span> audit.init()
                   </p>
@@ -112,11 +113,11 @@ export function Hero() {
 
               {/* Floating nodes */}
               <div
-                className="absolute -left-8 top-1/4 node-dot"
+                className="node-dot absolute -left-8 top-1/4"
                 style={{ animation: "float 6s ease-in-out infinite" }}
               />
               <div
-                className="absolute -right-4 bottom-1/3 node-dot"
+                className="node-dot absolute -right-4 bottom-1/3"
                 style={{
                   animation: "float 6s ease-in-out infinite",
                   animationDelay: "1s",

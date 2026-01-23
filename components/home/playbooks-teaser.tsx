@@ -1,9 +1,24 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Users, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { playbooks as allPlaybooks } from "@/lib/content";
 
-const playbooks = allPlaybooks.slice(0, 3);
+const upcomingTopics = [
+  {
+    icon: FileText,
+    title: "Managing Technical Debt",
+    description: "Strategies for addressing tech debt without stalling feature development",
+  },
+  {
+    icon: Users,
+    title: "Hiring Your First Engineer",
+    description: "How to evaluate, hire, and onboard when you're non-technical",
+  },
+  {
+    icon: Rocket,
+    title: "Launching Under Pressure",
+    description: "Frameworks for prioritizing and shipping when timelines are tight",
+  },
+];
 
 export function PlaybooksTeaser() {
   return (
@@ -13,46 +28,41 @@ export function PlaybooksTeaser() {
           {/* Left: Content */}
           <div>
             <p className="font-mono text-xs uppercase tracking-wider text-primary mb-4">
-              Free resources
+              Coming Soon
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">
               Playbooks for founders
             </h2>
             <p className="text-muted-foreground mb-8">
-              Distilled lessons from 15+ years and 40+ startups. Tactical guides
-              you can apply today—no fluff, no gating.
+              Tactical guides distilled from years of building products. Practical frameworks you can apply today—no fluff, no gating.
             </p>
             <Button asChild>
               <Link href="/playbooks">
-                Browse All Playbooks
+                Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
 
-          {/* Right: Playbook Cards */}
+          {/* Right: Upcoming Topics */}
           <div className="space-y-4">
-            {playbooks.map((playbook, index) => (
-              <Link
+            {upcomingTopics.map((topic, index) => (
+              <div
                 key={index}
-                href="/playbooks"
-                className="group flex items-start gap-4 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300"
+                className="flex items-start gap-4 p-4 rounded-lg border border-border bg-card"
               >
                 <div className="p-2 rounded-lg bg-secondary">
-                  <BookOpen className="w-5 h-5 text-primary" />
+                  <topic.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold group-hover:text-primary transition-colors mb-1">
-                    {playbook.title}
+                  <h3 className="font-semibold mb-1">
+                    {topic.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {playbook.description}
+                  <p className="text-sm text-muted-foreground">
+                    {topic.description}
                   </p>
                 </div>
-                <div className="text-xs text-muted-foreground font-mono shrink-0">
-                  {playbook.readTime}
-                </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
