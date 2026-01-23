@@ -1,5 +1,4 @@
 import Gtm from "@/components/scripts/gtm";
-import "../globals.css";
 import "../profile.css";
 import "../print.css";
 

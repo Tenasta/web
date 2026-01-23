@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-const footerLinks = {
+type FooterLink = {
+  label: string;
+  href: string;
+  target?: string;
+};
+
+const footerLinks: Record<string, FooterLink[]> = {
   services: [
     { label: "Readiness Audit", href: "/services#audit" },
     { label: "Embedded Sprint", href: "/services#sprint" },
@@ -13,8 +19,16 @@ const footerLinks = {
   ],
   connect: [
     { label: "Contact", href: "/contact" },
-    { label: "LinkedIn", href: "#" },
-    { label: "GitHub", href: "#" },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/nickmartink",
+      target: "_blank",
+    },
+    {
+      label: "GitHub",
+      href: "https://www.github.com/nickmartink",
+      target: "_blank",
+    },
   ],
 };
 
@@ -64,6 +78,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    target={link.target}
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
@@ -95,7 +110,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Tenasta Ltd Ltd. All rights reserved.
+            © {new Date().getFullYear()} Tenasta Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-primary" />

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Sen:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Figtree", sans-serif;
+  @apply bg-white text-gray-900;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  @apply text-gray-900;
+}
+p {
+  font-weight: 300;
+  @apply text-gray-600;
+  &.font-bold {
+    font-weight: 700;
+    @apply text-gray-800;
+  }
+}
+
+a {
+  @apply text-blue-400 underline;
+}
+.profile-container {
+  @apply max-w-5xl mx-auto py-12;
+}
+
+@media print {
+  .profile-container {
+    @apply max-w-none mx-0 p-0;
+  }
+}
+
+.profile-section {
+  @apply px-6 drop-shadow-2xl bg-gray-50 border border-gray-100;
+}
+
+@media print {
+  .profile-section {
+    @apply drop-shadow-none bg-white border-none;
+    padding: 1rem 4rem !important;
+    height: 100vh !important;
+  }
+}
+
+.experience .grid > div {
+  /* default styles */
+}
+
+@media print {
+  .experience .grid > div {
+    @apply pt-4 gap-x-0;
+  }
+
+  .experience h3 {
+    @apply mb-0;
+  }
+}
+
+.experience .details p {
+  @apply mb-2;
+}
+
+@media print {
+  .experience .details p {
+    @apply mb-1 text-sm;
+  }
+}
