@@ -29,7 +29,7 @@ export const scenarios: ScenarioExtended[] = [
     icon: Cpu,
     title: "Unsure where AI helps?",
     description:
-      "Everyone says you need AI. You're not sure what's real vs. hype for your use case. You don't want a demo feature — you want measurable value.",
+      "Everyone says you need AI. You're not sure what's real vs. hype for your use case. You don't want a demo feature  -  you want measurable value.",
     solution: "Pragmatic AI assessment - discover what will create value.",
   },
   {

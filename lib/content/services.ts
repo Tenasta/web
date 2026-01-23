@@ -35,7 +35,7 @@ export const services: ServiceExtended[] = [
     duration: "2-8 weeks",
     price: "Price on request",
     description:
-      "I join your team as a drop-in technical lead. I understand context fast, unblock your developers, ship features, and establish better processes—without the overhead of a full-time hire.",
+      "I join your team as a drop-in technical lead. I understand context fast, unblock your developers, ship features, and establish better processes - without the overhead of a full-time hire.",
     whatYouGet: [
       "Full-time embedded support (async + sync)",
       "Hands-on coding and architecture decisions",

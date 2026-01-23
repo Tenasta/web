@@ -18,10 +18,10 @@ const footerLinks: Record<string, FooterLink[]> = {
     { label: "About Me", href: "/about" },
   ],
   connect: [
-    { label: "Contact", href: "/contact" },
+    { label: "Contact", href: "/contact#contact" },
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/nickmartink",
+      href: "https://www.linkedin.com/in/nicholas-martin-kruck/",
       target: "_blank",
     },
     {
@@ -45,7 +45,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Nick Martin — Technical co-pilot for early-stage founders.
+              Nick Martin - Technical co-pilot for early-stage founders.
               Building products that work, teams that ship.
             </p>
           </div>
@@ -97,6 +97,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    target={link.target}
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}

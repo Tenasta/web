@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { AiFillGithub, AiOutlineMail, AiOutlineMobile } from "react-icons/ai";
 
 export default function BioSection() {
@@ -5,7 +6,7 @@ export default function BioSection() {
     <section className="a4:grid a4:grid-cols-3 pb-4 md:border-b md:border-gray-300 md:py-10">
       <div className="a4:flex-row a4:col-span-2 flex flex-col">
         <div className="mr-4 flex-shrink-0 self-center">
-          <img
+          <Image
             className="inline-block h-24 w-24 rounded-full"
             src="/images/avatar.jpg"
             alt="Headshot of Nick"

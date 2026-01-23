@@ -11,7 +11,7 @@ export const projects: ProjectExtended[] = [
     duration: "2.5 years",
     impact: [
       "Delivered MVP SaaS within budget",
-      "Modernized infrastructure with Pulumi IaC",
+      "Modernised infrastructure with Pulumi IaC",
       "Turned around underperforming offshore team",
     ],
     tags: ["AWS", "Stripe", "Pulumi", "CI/CD", "Laravel"],

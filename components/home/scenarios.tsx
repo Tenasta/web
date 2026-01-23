@@ -16,7 +16,7 @@ export function Scenarios() {
           <p className="text-muted-foreground">
             These are the moments when a technical co-pilot pays for itself. I
             understand your context fast, unblock your team, and make your
-            product work—without the overhead of a full-time hire.
+            product work - without the overhead of a full-time hire.
           </p>
         </div>
 

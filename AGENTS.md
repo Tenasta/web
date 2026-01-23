@@ -1,4 +1,4 @@
-# AGENTS.md — instructions for coding agents
+# AGENTS.md  -  instructions for coding agents
 
 
 ## Security & data handling

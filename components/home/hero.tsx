@@ -39,7 +39,7 @@ export function Hero() {
               className="fade-in-up mb-4 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
               style={{ animationDelay: "0.2s" }}
             >
-              I help founders ship and evolve real products when it counts —
+              I help founders ship and evolve real products when it counts -
               while retaining control and building momentum.
             </p>
 

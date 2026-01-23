@@ -18,7 +18,7 @@ export default function ServicesPage() {
       <PageHero
         badge="Services"
         title="Clear scope. Predictable outcomes."
-        description="Three productized ways to work together. Pick what fits your situation, or let's design something custom based on your needs."
+        description="Three productised ways to work together. Pick what fits your situation, or let's design something custom based on your needs."
       />
 
       {/* Services Detail */}

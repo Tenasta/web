@@ -6,7 +6,8 @@ const upcomingTopics = [
   {
     icon: FileText,
     title: "Managing Technical Debt",
-    description: "Strategies for addressing tech debt without stalling feature development",
+    description:
+      "Strategies for addressing tech debt without stalling feature development",
   },
   {
     icon: Users,
@@ -16,7 +17,8 @@ const upcomingTopics = [
   {
     icon: Rocket,
     title: "Launching Under Pressure",
-    description: "Frameworks for prioritizing and shipping when timelines are tight",
+    description:
+      "Frameworks for prioritizing and shipping when timelines are tight",
   },
 ];
 
@@ -24,17 +26,18 @@ export function PlaybooksTeaser() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left: Content */}
           <div>
-            <p className="font-mono text-xs uppercase tracking-wider text-primary mb-4">
+            <p className="mb-4 font-mono text-xs uppercase tracking-wider text-primary">
               Coming Soon
             </p>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+            <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
               Playbooks for founders
             </h2>
-            <p className="text-muted-foreground mb-8">
-              Tactical guides distilled from years of building products. Practical frameworks you can apply today—no fluff, no gating.
+            <p className="mb-8 text-muted-foreground">
+              Tactical guides distilled from years of building products.
+              Practical frameworks you can apply today - no fluff, no gating.
             </p>
             <Button asChild>
               <Link href="/playbooks">
@@ -49,15 +52,13 @@ export function PlaybooksTeaser() {
             {upcomingTopics.map((topic, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-4 rounded-lg border border-border bg-card"
+                className="flex items-start gap-4 rounded-lg border border-border bg-card p-4"
               >
-                <div className="p-2 rounded-lg bg-secondary">
-                  <topic.icon className="w-5 h-5 text-primary" />
+                <div className="rounded-lg bg-secondary p-2">
+                  <topic.icon className="h-5 w-5 text-primary" />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold mb-1">
-                    {topic.title}
-                  </h3>
+                <div className="min-w-0 flex-1">
+                  <h3 className="mb-1 font-semibold">{topic.title}</h3>
                   <p className="text-sm text-muted-foreground">
                     {topic.description}
                   </p>

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Tenasta Ltd",
   },
   description:
-    "Drop-in technical co-pilot for early-stage founders. Nick Martin helps startups understand context fast, unblock teams, and ship products—without full-time hire overhead.",
+    "Drop-in technical co-pilot for early-stage founders. Nick Martin helps startups understand context fast, unblock teams, and ship products - without full-time hire overhead.",
   keywords: [
     "technical consulting",
     "startup advisor",
