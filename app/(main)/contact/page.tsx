@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Calendar, Clock, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { siteConstants, contactContent } from "@/lib/content";
 
 export default function ContactPage() {
@@ -16,11 +16,65 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [name, setName] = useState("");
+  const [honeypot, setHoneypot] = useState("");
+  const [formLoadTime, setFormLoadTime] = useState<number>(0);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  // Capture when form loads for time-based bot detection
+  useEffect(() => {
+    setFormLoadTime(Date.now());
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // UI mockup only - no backend integration
-    console.log("Form submitted:", formData);
-    alert("This is a UI mockup. Form submission is not implemented.");
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          honeypot,
+          formLoadTime,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      // Success - reset form and show success message
+      setSubmitStatus("success");
+      setName(formData.name);
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        service: "",
+        message: "",
+      });
+      setHoneypot("");
+      setFormLoadTime(Date.now());
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus("error");
+      setErrorMessage(
+        error instanceof Error ? error.message : "Something went wrong"
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const iconMap = {
@@ -88,6 +142,28 @@ export default function ContactPage() {
             <h2 className="mb-6 text-xl font-semibold">
               {contactContent.form.title}
             </h2>
+
+            {/* Success Message */}
+            {submitStatus === "success" && (
+              <div className="mb-6 rounded-lg border border-green-200 bg-green-50 p-4 text-green-800">
+                <p className="font-semibold">
+                  Thanks{name ? ` ${name}` : ""}, your message was sent
+                  successfully!
+                </p>
+                <p className="text-sm">
+                  We will get back to you as soon as possible.
+                </p>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitStatus === "error" && (
+              <div className="mb-6 rounded-lg border border-red-200 bg-red-50 p-4 text-red-800">
+                <p className="font-semibold">Failed to send message</p>
+                <p className="text-sm">{errorMessage}</p>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
@@ -183,8 +259,27 @@ export default function ContactPage() {
                 />
               </div>
 
-              <Button size="lg" type="submit" className="w-full">
-                {contactContent.form.submitButton}
+              {/* Honeypot field - hidden from users but visible to bots */}
+              <div className="hidden" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <Input
+                  id="website"
+                  name="website"
+                  type="text"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
+              <Button
+                size="lg"
+                type="submit"
+                className="w-full"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : contactContent.form.submitButton}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </form>
