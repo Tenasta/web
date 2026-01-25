@@ -44,7 +44,7 @@ export default function PlaybooksPage() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/services">
+                <Link href="/ways-to-work-together">
                   Explore Services
                 </Link>
               </Button>

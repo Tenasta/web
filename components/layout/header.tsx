@@ -11,7 +11,7 @@ import { siteConstants } from "@/lib/content";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
+  { href: "/ways-to-work-together", label: "Ways to work together" },
   { href: "/projects", label: "Projects" },
   { href: "/playbooks", label: "Playbooks" },
   { href: "/about", label: "About Me" },

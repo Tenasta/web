@@ -8,9 +8,9 @@ type FooterLink = {
 
 const footerLinks: Record<string, FooterLink[]> = {
   services: [
-    { label: "Readiness Audit", href: "/services#audit" },
-    { label: "Embedded Sprint", href: "/services#sprint" },
-    { label: "Launch Support", href: "/services#launch" },
+    { label: "Readiness Audit", href: "/ways-to-work-together#audit" },
+    { label: "Embedded Sprint", href: "/ways-to-work-together#sprint" },
+    { label: "Launch Support", href: "/ways-to-work-together#launch" },
   ],
   resources: [
     { label: "Playbooks", href: "/playbooks" },

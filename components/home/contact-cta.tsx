@@ -32,7 +32,7 @@ export function ContactCTA() {
             </Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <Link href="/services">
+            <Link href="/ways-to-work-together">
               See Services
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
