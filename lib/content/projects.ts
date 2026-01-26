@@ -106,6 +106,30 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: "investment-group-tech-team",
+    title: "Investment Group Tech Team",
+    categories: ["Team Growth", "Technical Leadership"],
+    description:
+      "Post-merger consolidation of technology teams across multiple brands for an investment group. Working directly with the CEO and CTO, I built and managed a centralised product and technology team of 20+ across Engineering, Product, and Data. Established recruitment processes, cross-functional teams, professional development plans, and internal processes to create a strong remote/hybrid engineering culture.",
+    client: "CEO/CTO",
+    duration: "18 months",
+    impact: [
+      "Built cross-functional team of 20+ across Engineering, Product, and Data",
+      "Established recruitment processes and professional development framework",
+      "Created strong remote/hybrid engineering and product culture",
+      "Unified technology teams across portfolio of brands post-merger",
+    ],
+    tags: [
+      "Team Building",
+      "Leadership",
+      "Recruitment",
+      "Remote Work",
+      "Cross-functional Teams",
+      "Process Design",
+    ],
+    featured: true,
+  },
+  {
     slug: "logistics-automation",
     title: "Logistics Automation",
     categories: [
