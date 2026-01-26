@@ -1,7 +1,7 @@
 import { Search, Wrench, Rocket } from "lucide-react";
-import type { ServiceExtended } from "@/lib/types";
+import type { Service } from "@/lib/types";
 
-export const services: ServiceExtended[] = [
+export const services: Service[] = [
   {
     id: "audit",
     icon: Search,

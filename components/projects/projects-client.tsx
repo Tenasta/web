@@ -2,22 +2,22 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import type { ProjectExtended } from "@/lib/types";
-import { getUniqueCategories } from "@/lib/adapters/projects";
+import type { Project, ProjectCategory } from "@/lib/types";
+import { getProjectCategories } from "@/lib/adapters/projects";
 import { ProjectFilters } from "./project-filters";
 
 interface ProjectsClientProps {
-  projects: ProjectExtended[];
+  projects: Project[];
 }
 
 export function ProjectsClient({ projects }: ProjectsClientProps) {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const categories = getUniqueCategories(projects);
+  const [activeCategory, setActiveCategory] = useState<ProjectCategory | "All">("All");
+  const categories = getProjectCategories();
 
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      : projects.filter((p) => p.categories.includes(activeCategory));
 
   return (
     <>
@@ -25,20 +25,38 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
         categories={categories}
         activeCategory={activeCategory}
         onFilterChange={setActiveCategory}
+        projectCount={filteredProjects.length}
       />
 
-      <div className="grid gap-8" id="projects-grid" role="tabpanel">
+      <div
+        key={activeCategory}
+        className="grid gap-8 animate-fade-in-stagger"
+        id="projects-grid"
+        role="tabpanel"
+      >
         {filteredProjects.map((project, index) => (
           <article
-            key={index}
+            key={project.slug}
             className="group p-8 rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300"
+            style={
+              {
+                "--animation-delay": `${index * 50}ms`,
+              } as React.CSSProperties
+            }
           >
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Left: Meta */}
               <div>
-                <p className="font-mono text-xs uppercase tracking-wider text-primary mb-2">
-                  {project.category}
-                </p>
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {project.categories.map((category) => (
+                    <span
+                      key={category}
+                      className="px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-primary/10 text-primary rounded"
+                    >
+                      {category}
+                    </span>
+                  ))}
+                </div>
                 <div className="mb-4">
                   {project.logo ? (
                     <Image

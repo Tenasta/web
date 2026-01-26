@@ -1,10 +1,10 @@
-import type { ProjectExtended } from "@/lib/types";
+import type { Project } from "@/lib/types";
 
-export const projects: ProjectExtended[] = [
+export const projects: Project[] = [
   {
     slug: "glaciera",
     title: "Glaciera",
-    category: "Product Development",
+    categories: ["Product Delivery", "Technical Leadership"],
     description:
       "3D model design marketplace for jewelry businesses with quotation builder, design calculator, and client collection tools. Led technical delivery from offshore team turnaround through MVP launch and subsequent infrastructure modernisation.",
     client: "Tech Lead",
@@ -21,7 +21,12 @@ export const projects: ProjectExtended[] = [
   {
     slug: "fantasybet",
     title: "FantasyBet",
-    category: "Technical Leadership",
+    categories: [
+      "Idea → Product",
+      "Technical Leadership",
+      "Product Delivery",
+      "Team Growth",
+    ],
     description:
       "Award-winning daily, weekly, and season-long fantasy football platform with premium UI/UX, real-time scoring, and gamification. Built as solo engineer alongside a co-founding team. We grew the user base with innovative features and strong community engagement. We conducted successful fundraising rounds and ultimately exited via acquisition.",
     client: "CTO & Co-Founder",
@@ -39,7 +44,7 @@ export const projects: ProjectExtended[] = [
   {
     slug: "fantech",
     title: "FanTech",
-    category: "Product Development",
+    categories: ["Product Delivery", "Idea → Product"],
     description:
       "Plug-and-play B2B acquisition and engagement platform for i-gaming and sports media companies. Built fantasy and free-to-play games as embeddable widgets. Ensured full compliance and skill-game based licensing. Re-engaged users with gamified experiences and cross-selling into pre-filled betslips.",
     client: "Co-Founder & CTO",
@@ -55,7 +60,7 @@ export const projects: ProjectExtended[] = [
   {
     slug: "footium",
     title: "Footium",
-    category: "Technical Leadership",
+    categories: ["Technical Leadership", "Product Delivery"],
     description:
       "Venture-backed sports gaming startup. Moved from seed prototype to viable product by establishing engineering foundations, building real-time backend services at scale, and creating data-driven decision-making infrastructure.",
     client: "Principal Engineer",
@@ -79,7 +84,7 @@ export const projects: ProjectExtended[] = [
   {
     slug: "betting-exchange-advisory",
     title: "Sports Trading",
-    category: "Advisory & Team Building",
+    categories: ["Team Growth", "Technical Leadership"],
     description:
       "High-frequency trading platform for pre-match and in-play betting markets on high-liquidity exchanges. Provided strategic advisory on team composition, recruited specialist data engineering and algorithmic trading experts, and established technical foundations for market analysis and exposure strategies.",
     client: "Proprietary trading fund (sports)",
@@ -103,10 +108,14 @@ export const projects: ProjectExtended[] = [
   {
     slug: "logistics-automation",
     title: "Logistics Automation",
-    category: "MVP & Prototyping",
+    categories: [
+      "Idea → Product",
+      "Audit & Due Diligence",
+      "Technical Leadership",
+    ],
     description:
-      "Logistics company with a underperforming technical partner seeking to improve their B2C product and automate invoice processing from global courier firms. Identified key improvements and prioritised tasks for development, prepared an MVP prototype specification for automated invoice extraction, validation, and subsequent business logic actions.",
-    client: "MVP Developer",
+      "Logistics company with an underperforming technical partner seeking to improve their B2C product and automate invoice processing from global courier firms. Identified key improvements and prioritised tasks for development, prepared an MVP prototype specification for automated invoice extraction, validation, and subsequent business logic actions.",
+    client: "Courier & Logistics Company",
     duration: "3 months",
     impact: [
       "Prioritised key product improvements",
@@ -118,7 +127,7 @@ export const projects: ProjectExtended[] = [
   {
     slug: "platform-security-audit",
     title: "Platform Security Audit",
-    category: "Due Diligence & Audit",
+    categories: ["Audit & Due Diligence"],
     description:
       "B2B software company facing delayed deliveries and system reliability issues with their technology provider. Conducted comprehensive security assessment revealing negligent security practices and critical infrastructure vulnerabilities. Provided remediation recommendations and ultimately the client achieved a successful legal settlement.",
     client: "B2B Software Provider",
@@ -134,7 +143,7 @@ export const projects: ProjectExtended[] = [
   {
     slug: "sportsbook-platform-evaluation",
     title: "Sportsbook Platform Evaluation",
-    category: "Due Diligence & Audit",
+    categories: ["Audit & Due Diligence", "Technical Leadership"],
     description:
       "B2B sportsbook platform evaluation for white-label implementation. Conducted technical due diligence on potential platform providers, assessed architecture scalability, regulatory compliance, payment integration complexity, and licensing requirements. Recommendations led to optimal provider selection.",
     client: "Sports Betting Brand",

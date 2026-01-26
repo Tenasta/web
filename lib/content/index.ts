@@ -5,3 +5,8 @@ export { scenarios } from "./scenarios";
 export { siteConstants } from "./constants";
 export { aboutContent } from "./about";
 export { contactContent } from "./contact";
+export {
+  PROJECT_CATEGORIES,
+  CATEGORY_DESCRIPTIONS,
+  type ProjectCategory,
+} from "./categories";

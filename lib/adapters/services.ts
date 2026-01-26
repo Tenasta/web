@@ -1,11 +1,11 @@
-import type { ServiceExtended, ServicePreview } from "@/lib/types";
+import type { Service, ServicePreview } from "@/lib/types";
 
 /**
  * Transforms full service data into preview format for home page
  * Maps whatYouGet → deliverables (first 5 items)
  */
 export function toServicesPreview(
-  services: ServiceExtended[]
+  services: Service[]
 ): ServicePreview[] {
   return services.map((service) => ({
     id: service.id,

@@ -1,15 +1,9 @@
 import type { LucideIcon } from "lucide-react";
+import type { ProjectCategory as ProjectCategoryType } from "@/lib/content/categories";
+
+export type ProjectCategory = ProjectCategoryType;
 
 export interface Service {
-  slug: string;
-  title: string;
-  description: string;
-  icon: string;
-  features: string[];
-  content?: string;
-}
-
-export interface ServiceExtended {
   id: string;
   icon: LucideIcon;
   title: string;
@@ -39,20 +33,7 @@ export interface Project {
   slug: string;
   title: string;
   description: string;
-  technologies: string[];
-  category: string;
-  image?: string;
-  link?: string;
-  github?: string;
-  featured?: boolean;
-  content?: string;
-}
-
-export interface ProjectExtended {
-  slug: string;
-  title: string;
-  description: string;
-  category: string;
+  categories: ProjectCategory[];
   client: string;
   duration: string;
   impact: string[];
@@ -65,7 +46,7 @@ export interface ProjectPreview {
   slug: string;
   title: string;
   description: string;
-  category: string;
+  categories: ProjectCategory[];
   impact: string;
   tags: string[];
   logo?: string;
@@ -85,12 +66,6 @@ export interface Playbook {
 }
 
 export interface Scenario {
-  title: string;
-  description: string;
-  icon: string;
-}
-
-export interface ScenarioExtended {
   title: string;
   description: string;
   solution: string;

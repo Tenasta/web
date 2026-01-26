@@ -1,7 +1,7 @@
 import { Rocket, Users, Cpu, AlertTriangle, Code2, Target } from "lucide-react";
-import type { ScenarioExtended } from "@/lib/types";
+import type { Scenario } from "@/lib/types";
 
-export const scenarios: ScenarioExtended[] = [
+export const scenarios: Scenario[] = [
   {
     icon: AlertTriangle,
     title: "Working hard, not moving forward",

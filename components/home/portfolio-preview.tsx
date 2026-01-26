@@ -41,10 +41,17 @@ export function PortfolioPreview() {
               className="group rounded-lg border border-border bg-background p-6 transition-all duration-300 hover:border-primary/50"
             >
               <div className="mb-4 flex items-start justify-between">
-                <div>
-                  <p className="mb-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                    {project.category}
-                  </p>
+                <div className="flex-1">
+                  <div className="mb-2 flex flex-wrap gap-1">
+                    {project.categories.map((category) => (
+                      <span
+                        key={category}
+                        className="px-1.5 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-primary/10 text-primary rounded"
+                      >
+                        {category}
+                      </span>
+                    ))}
+                  </div>
                   {project.logo ? (
                     <Image
                       src={project.logo}
