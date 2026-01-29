@@ -11,7 +11,7 @@ export function Scenarios() {
             When to reach out
           </p>
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
-            Recognize any of these?
+            Recognise any of these?
           </h2>
           <p className="text-muted-foreground">
             These are the moments when a technical co-pilot pays for itself. I
