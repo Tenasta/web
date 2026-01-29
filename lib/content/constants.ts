@@ -12,7 +12,7 @@ export const siteConstants: SiteConstants = {
     email: "nick@tenasta.com",
   },
   cta: {
-    bookACall: "Book a Call",
+    bookACall: "Let's Talk",
     discuss: "Start a Conversation",
   },
   portfolio: {

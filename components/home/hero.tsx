@@ -68,7 +68,7 @@ export function Hero() {
             >
               <Button variant="hero" size="xl" asChild>
                 <Link href="/contact">
-                  Request a Readiness Audit
+                  {siteConstants.cta.discuss}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

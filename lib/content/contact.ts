@@ -8,7 +8,7 @@ export const contactContent = {
     badge: "Contact",
     title: "Let's talk about what's getting in the way",
     description:
-      "A short conversation can help clarify what's actually going on - and whether I'm the right person to help. Whether you have a specific project in mind or just want to explore how I might help, I'm happy to chat.",
+      "Whether you're stuck on something, shipping has stalled, or launch is coming and you need honest feedback - a short conversation can clarify what's actually going on and whether I can help.",
   },
   contactOptions: [
     {
