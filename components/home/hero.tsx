@@ -73,7 +73,7 @@ export function Hero() {
                 </Link>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <Link href="/playbooks">Browse Playbooks</Link>
+                <Link href="/ways-to-work-together">Ways to Work Together</Link>
               </Button>
             </div>
           </div>

@@ -20,7 +20,7 @@
     --popover-foreground: 210 20% 92%;
 
     /* Primary - Cyan/Teal accent for technical feel */
-    --primary: 185 60% 50%;
+    --primary: 188 90% 45%;
     --primary-foreground: 220 20% 6%;
 
     /* Secondary - Subtle slate */
@@ -49,9 +49,21 @@
     --node-glow: 185 60% 50%;
 
     /* Gradients */
-    --gradient-subtle: linear-gradient(135deg, hsl(220 18% 10%) 0%, hsl(220 20% 6%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(185 60% 50%) 0%, hsl(190 70% 40%) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(185 60% 50% / 0.15) 0%, transparent 70%);
+    --gradient-subtle: linear-gradient(
+      135deg,
+      hsl(220 18% 10%) 0%,
+      hsl(220 20% 6%) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(185 60% 50%) 0%,
+      hsl(190 70% 40%) 100%
+    );
+    --gradient-glow: radial-gradient(
+      ellipse at center,
+      hsl(185 60% 50% / 0.15) 0%,
+      transparent 70%
+    );
 
     /* Shadows */
     --shadow-subtle: 0 4px 20px -4px hsl(220 20% 0% / 0.5);
@@ -82,15 +94,31 @@
   /* Technical grid background */
   .bg-grid {
     background-image:
-      linear-gradient(to right, hsl(var(--grid-line) / 0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--grid-line) / 0.3) 1px, transparent 1px);
+      linear-gradient(
+        to right,
+        hsl(var(--grid-line) / 0.3) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        hsl(var(--grid-line) / 0.3) 1px,
+        transparent 1px
+      );
     background-size: 60px 60px;
   }
 
   .bg-grid-subtle {
     background-image:
-      linear-gradient(to right, hsl(var(--grid-line) / 0.15) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--grid-line) / 0.15) 1px, transparent 1px);
+      linear-gradient(
+        to right,
+        hsl(var(--grid-line) / 0.15) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        hsl(var(--grid-line) / 0.15) 1px,
+        transparent 1px
+      );
     background-size: 40px 40px;
   }
 
@@ -105,7 +133,7 @@
 
   /* Node/connection decorations */
   .node-dot {
-    @apply w-2 h-2 rounded-full bg-primary;
+    @apply h-2 w-2 rounded-full bg-primary;
     box-shadow: 0 0 10px hsl(var(--primary) / 0.5);
   }
 
@@ -119,11 +147,11 @@
   }
 
   .container-narrow {
-    @apply max-w-4xl mx-auto px-6;
+    @apply mx-auto max-w-4xl px-6;
   }
 
   .container-wide {
-    @apply max-w-7xl mx-auto px-6;
+    @apply mx-auto max-w-7xl px-6;
   }
 }
 
@@ -134,8 +162,8 @@
   }
 
   .animated-underline::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300;
+    content: "";
+    @apply absolute bottom-0 left-0 h-px w-0 bg-primary transition-all duration-300;
   }
 
   .animated-underline:hover::after {
@@ -209,10 +237,22 @@
     opacity: 0;
   }
 
-  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
-  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
-  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
-  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
-  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
-  .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+  .stagger-children > *:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .stagger-children > *:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .stagger-children > *:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .stagger-children > *:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .stagger-children > *:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .stagger-children > *:nth-child(6) {
+    animation-delay: 0.6s;
+  }
 }
