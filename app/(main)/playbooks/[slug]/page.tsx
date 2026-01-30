@@ -5,6 +5,7 @@ interface PlaybookPageProps {
 }
 
 // Redirect all individual playbook pages to the main playbooks page
-export default async function PlaybookPage({ params }: PlaybookPageProps) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default async function PlaybookPage(props: PlaybookPageProps) {
   redirect("/playbooks");
 }

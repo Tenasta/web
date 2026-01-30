@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Calendar, Clock, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { ObfuscatedEmail } from "@/components/shared/obfuscated-email";
-import { siteConstants, contactContent } from "@/lib/content";
+import { contactContent } from "@/lib/content";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
