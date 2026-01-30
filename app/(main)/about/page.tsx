@@ -40,9 +40,16 @@ export default function AboutPage() {
                 <h1 className="mb-6 text-4xl font-semibold md:text-5xl">
                   {aboutContent.hero.title}
                 </h1>
-                <p className="mb-8 text-lg text-muted-foreground md:text-xl">
-                  {aboutContent.hero.description}
-                </p>
+
+                {aboutContent.hero.description.map((para, index) => (
+                  <p
+                    key={index}
+                    className="mb-8 text-lg text-muted-foreground md:text-xl"
+                  >
+                    {para}
+                  </p>
+                ))}
+
                 <div className="flex flex-wrap justify-center gap-4 md:justify-start">
                   <Button asChild>
                     <Link href="/contact">

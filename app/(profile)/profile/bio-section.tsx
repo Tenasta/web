@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
-import { AiFillGithub, AiOutlineMail, AiOutlineMobile } from "react-icons/ai";
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { ObfuscatedEmail } from "@/components/shared/obfuscated-email";
 
 export default function BioSection() {
   return (
@@ -20,9 +23,7 @@ export default function BioSection() {
       <div className="a4:pl-4 a4:pt-4 break-all border-gray-300 text-gray-600 md:ml-4 md:border-l-2">
         <div className="a4:flex-row a4:justify-end a4:mb-4 flex flex-row-reverse justify-center">
           <p>
-            <a target="_blank" href="mailto:nick@tenasta.com">
-              nick@tenasta.com
-            </a>
+            <ObfuscatedEmail className="text-gray-600 hover:underline" />
           </p>
           <div className="a4:block hidden self-center pl-6">
             <AiOutlineMail className="inline-block h-6 w-6 rounded-full" />
@@ -37,13 +38,6 @@ export default function BioSection() {
           </p>
           <div className="a4:block hidden self-center pl-6">
             <AiFillGithub className="inline-block h-6 w-6 rounded-full" />
-          </div>
-        </div>
-
-        <div className="a4:flex-row a4:justify-end a4:mb-4 flex flex-row-reverse justify-center">
-          <p>+44 7595494939</p>
-          <div className="a4:block hidden self-center pl-6">
-            <AiOutlineMobile className="inline-block h-6 w-6 rounded-full" />
           </div>
         </div>
       </div>

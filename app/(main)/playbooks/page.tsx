@@ -23,20 +23,23 @@ export default function PlaybooksPage() {
       {/* Coming Soon Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary mb-6">
-              <BookOpen className="w-8 h-8 text-primary" />
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-secondary">
+              <BookOpen className="h-8 w-8 text-primary" />
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+            <h2 className="mb-4 text-2xl font-semibold md:text-3xl">
               Coming Soon
             </h2>
 
-            <p className="text-muted-foreground mb-8 text-lg">
-              I'm currently working on a collection of tactical playbooks covering topics like technical debt management, hiring your first engineer, and launching under pressure. In the meantime, let's talk about your specific challenges.
+            <p className="mb-8 text-lg text-muted-foreground">
+              I&apos;m currently working on a collection of tactical playbooks
+              covering topics like technical debt management, hiring your first
+              engineer, and launching under pressure. In the meantime,
+              let&apos;s talk about your specific challenges.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button asChild size="lg">
                 <Link href="/contact">
                   {siteConstants.cta.discuss}
@@ -44,9 +47,7 @@ export default function PlaybooksPage() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/ways-to-work-together">
-                  Ways to Work Together
-                </Link>
+                <Link href="/ways-to-work-together">Ways to Work Together</Link>
               </Button>
             </div>
           </div>

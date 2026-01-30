@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Calendar, Clock, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { ObfuscatedEmail } from "@/components/shared/obfuscated-email";
 import { siteConstants, contactContent } from "@/lib/content";
 
 export default function ContactPage() {
@@ -16,7 +17,7 @@ export default function ContactPage() {
     message: "",
   });
 
-  const [name, setName] = useState("");
+  const [submittedName, setSubmittedName] = useState("");
   const [honeypot, setHoneypot] = useState("");
   const [formLoadTime, setFormLoadTime] = useState<number>(0);
 
@@ -56,7 +57,7 @@ export default function ContactPage() {
 
       // Success - reset form and show success message
       setSubmitStatus("success");
-      setName(formData.name);
+      setSubmittedName(formData.name);
       setFormData({
         name: "",
         email: "",
@@ -123,12 +124,7 @@ export default function ContactPage() {
                         </Button>
                       )}
                       {option.icon === "Mail" && (
-                        <a
-                          href={`mailto:${siteConstants.contact.email}`}
-                          className="text-sm text-primary hover:underline"
-                        >
-                          {siteConstants.contact.email}
-                        </a>
+                        <ObfuscatedEmail className="text-sm text-primary hover:underline" />
                       )}
                     </div>
                   </div>
@@ -147,7 +143,7 @@ export default function ContactPage() {
             {submitStatus === "success" && (
               <div className="mb-6 rounded-lg border border-green-200 bg-green-50 p-4 text-green-800">
                 <p className="font-semibold">
-                  Thanks{name ? ` ${name}` : ""}, your message was sent
+                  Thanks{submittedName ? ` ${submittedName}` : ""}, your message was sent
                   successfully!
                 </p>
                 <p className="text-sm">

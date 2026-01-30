@@ -7,8 +7,10 @@ export const aboutContent = {
   hero: {
     badge: "About Me",
     title: "Technical co-pilot for early-stage founders",
-    description:
-      "Hello, I'm Nick 👋 I am a hands-on technical leader with 20+ years building products from seed through growth stages. In various roles (founding engineer, CTO, Head of Engineering, tech lead) I have learned what works and what doesn't, often the hard way. Today, I help founders and teams - whether it's embedding with your team for a sprint, auditing your codebase before a raise, or helping ship a critical feature - I work alongside your team to get things moving.",
+    description: [
+      "Hello, I'm Nick 👋 I am a hands-on technical leader with 20+ years building products from seed through growth stages. In various roles (founding engineer, CTO, Head of Engineering, tech lead) I have learned what works and what doesn't, often the hard way. ",
+      "Today, I help founders and teams - whether it's embedding with your team for a sprint, auditing your codebase before a raise, or helping ship a critical feature - I work alongside your team to get things moving.",
+    ],
     avatar: "/images/avatar.jpg",
   },
   capabilities: {

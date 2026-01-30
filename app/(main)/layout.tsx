@@ -17,12 +17,15 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tenasta Ltd - Technical Co-pilot for Early-Stage Founders",
-    template: "%s | Tenasta Ltd",
+    default: "Nick Martin-Kruck Technical Co-pilot for Early-Stage Founders",
+    template:
+      "%s | Nick Martin-Kruck Technical Co-pilot for Early-Stage Founders",
   },
   description:
     "Drop-in technical co-pilot for early-stage founders. Nick Martin helps startups understand context fast, unblock teams, and ship products - without full-time hire overhead.",
   keywords: [
+    "fractional CTO",
+    "fractional technical leader",
     "technical consulting",
     "startup advisor",
     "CTO as a service",
@@ -31,20 +34,20 @@ export const metadata: Metadata = {
     "technical due diligence",
     "engineering leadership",
   ],
-  authors: [{ name: "Nick Martin" }],
-  creator: "Nick Martin",
+  authors: [{ name: "Nick Martin-Kruck" }],
+  creator: "Nick Martin-Kruck",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://tenasta.com",
-    title: "Tenasta Ltd - Technical Co-pilot for Early-Stage Founders",
+    title: "Nick Martin-Kruck - Technical Co-pilot for Early-Stage Founders",
     description:
       "Drop-in technical co-pilot for early-stage founders. Unblock your team and ship products without full-time hire overhead.",
-    siteName: "Tenasta Ltd",
+    siteName: "Nick Martin-Kruck - Tenasta Ltd",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tenasta Ltd - Technical Co-pilot for Early-Stage Founders",
+    title: "Nick Martin-Kruck - Technical Co-pilot for Early-Stage Founders",
     description:
       "Drop-in technical co-pilot for early-stage founders. Unblock your team and ship products.",
   },

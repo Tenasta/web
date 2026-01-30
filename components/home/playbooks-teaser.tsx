@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen, FileText, Users, Rocket } from "lucide-react";
+import { ArrowRight, FileText, Users, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const upcomingTopics = [

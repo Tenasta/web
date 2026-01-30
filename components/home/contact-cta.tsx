@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ObfuscatedEmail } from "@/components/shared/obfuscated-email";
 import { siteConstants } from "@/lib/content";
 
 export function ContactCTA() {
@@ -40,13 +41,7 @@ export function ContactCTA() {
         </div>
 
         <p className="mt-8 text-sm text-muted-foreground">
-          Or email directly:{" "}
-          <a
-            href={`mailto:${siteConstants.contact.email}`}
-            className="text-primary hover:underline"
-          >
-            {siteConstants.contact.email}
-          </a>
+          Or email directly: <ObfuscatedEmail />
         </p>
       </div>
     </section>

@@ -77,23 +77,30 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error("Brevo API error:", error);
+    console.error("Contact form error:", error);
 
-    // Brevo-specific error handling
-    const errorMessage =
-      error instanceof Error && 'response' in error
-        ? (error as { response?: { body?: { message?: string }; statusCode?: number } }).response?.body?.message || error.message
-        : error instanceof Error
-        ? error.message
-        : "Failed to send email";
+    // Extract error message and status code
+    let errorMessage = "Failed to send email";
+    let statusCode = 500;
+
+    if (error instanceof Error) {
+      errorMessage = error.message;
+
+      // Check if this is a Brevo API error with response details
+      if ('response' in error && error.response && typeof error.response === 'object') {
+        const response = error.response as { body?: { message?: string }; statusCode?: number };
+        if (response.body?.message) {
+          errorMessage = response.body.message;
+        }
+        if (response.statusCode) {
+          statusCode = response.statusCode;
+        }
+      }
+    }
 
     return NextResponse.json(
       { error: errorMessage },
-      {
-        status: error instanceof Error && 'response' in error
-          ? (error as { response?: { statusCode?: number } }).response?.statusCode || 500
-          : 500
-      }
+      { status: statusCode }
     );
   }
 }

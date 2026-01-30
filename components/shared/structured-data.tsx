@@ -1,13 +1,12 @@
 export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "ProfessionalService",
     name: "Tenasta",
     url: "https://tenasta.com",
-    logo: "https://tenasta.com/logo.png",
+    logo: "https://tenasta.com/images/tenasta-monogram.svg",
     description:
-      "Modern cloud infrastructure and DevOps solutions for businesses that demand excellence",
-    email: "hello@tenasta.com",
+      "Technical co-pilot for early-stage founders. Fractional technical leadership helping startups ship and evolve real products.",
     sameAs: [],
   };
 

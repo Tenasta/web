@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img src="public/images/tenasta-logo.png" alt="Tenasta" width="400" />
 
-## Getting Started
+  <h3>Technical co-pilot for early-stage founders</h3>
 
-First, run the development server:
+  <p>
+    I help founders ship and evolve real products when it counts – <br/>
+    while retaining control and building momentum.
+  </p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  <br/>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  <a href="https://tenasta.com/contact">
+    <strong>Start a conversation →</strong>
+  </a>
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## What I Do
 
-## Learn More
+**Drop-in technical leadership** for startups that need a senior technical leader without a full-time hire:
 
-To learn more about Next.js, take a look at the following resources:
+- 🔍 **Readiness Audits** – Know where you stand before raising, launching, or hiring
+- 🚀 **Embedded Sprints** – Hands-on problem solving when you need to ship now
+- 🎯 **Launch Support** – Ship with confidence when it matters most
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Experience
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+20+ years shipping products across seed through growth stages. Former CTO, founding engineer, and technical leader who's learned what works (and what doesn't) the hard way.
 
-## Deploy on Vercel
+Built teams. Scaled systems. Shipped under pressure. Now helping founders navigate the same challenges.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Get In Touch
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Whether you have a specific project in mind or just want to explore how I might help:
+
+**[Let's talk](https://tenasta.com/contact)** • **[See my work](https://tenasta.com/projects)** • **[Ways to work together](https://tenasta.com/ways-to-work-together)**
