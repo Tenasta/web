@@ -38,15 +38,13 @@ export function Footer() {
       <div className="container-wide section-padding">
         <div className="grid gap-12 md:grid-cols-4">
           {/* Brand */}
-          <div className="md:col-span-1">
+          <div className="gap-4 md:col-span-1">
             <Link href="/" className="mb-4 flex items-center gap-3">
-              <span className="text-xl font-bold text-primary">
-                Tenasta Ltd
-              </span>
+              <span className="text-xl font-bold">Nick Martin-Kruck</span>
             </Link>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Nick Martin - Technical co-pilot for early-stage founders.
-              Building products that work, teams that ship.
+              I am a Technical co-pilot for early-stage founders. I help teams
+              ship what matters and build clarity and momentum together.
             </p>
           </div>
 

@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { siteConstants } from "@/lib/content";
+import { siteConstants, aboutContent } from "@/lib/content";
 
 export function Hero() {
   return (
@@ -25,14 +26,34 @@ export function Hero() {
               </span>
             </div>
 
-            {/* Headline */}
-            <h1
+            {/* Headline with Avatar */}
+            <div
+              className="fade-in-up mb-6 flex items-center gap-4"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20 md:h-20 md:w-20">
+                <Image
+                  src={aboutContent.hero.avatar}
+                  alt="Nick Martin-Kruck"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <h1 className="text-md font-semibold leading-[1.1] tracking-tight md:text-xl lg:text-2xl">
+                Nick Martin-Kruck{" "}
+                <span className="leading-relaxed text-muted-foreground">
+                  {" · "} Fractional Technical Leader
+                </span>
+              </h1>
+            </div>
+            <h2
               className="fade-in-up mb-6 text-4xl font-semibold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl"
               style={{ animationDelay: "0.1s" }}
             >
               Your technical blind spots,
               <span className="text-primary"> quietly fixed.</span>
-            </h1>
+            </h2>
 
             {/* Subhead */}
             <p

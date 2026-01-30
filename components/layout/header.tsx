@@ -10,10 +10,10 @@ import { cn } from "@/lib/utils";
 import { siteConstants } from "@/lib/content";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/ways-to-work-together", label: "Ways to work together" },
-  { href: "/projects", label: "Projects" },
-  { href: "/playbooks", label: "Playbooks" },
+  { href: "/", label: "I'm Nick, a Fractional Technical Leader" },
+  { href: "/ways-to-work-together", label: "Ways to work with me" },
+  { href: "/projects", label: "My Projects" },
+  { href: "/playbooks", label: "Playbooks", disabled: true },
   { href: "/about", label: "About Me" },
 ];
 
@@ -22,13 +22,13 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <nav className="border-border/50 bg-background/80 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-xl">
+    <nav className="fixed left-0 right-0 top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container-wide">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/tenasta-logo.png"
+              src="/images/tenasta-monogram.svg"
               alt="Tenasta Ltd"
               width={120}
               height={32}
@@ -40,20 +40,22 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-1 md:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "animated-underline px-4 py-2 text-sm font-medium transition-colors",
-                  pathname === link.href
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks
+              .filter((link) => !link.disabled)
+              .map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "animated-underline px-4 py-2 text-sm font-medium transition-colors",
+                    pathname === link.href
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              ))}
           </div>
 
           {/* CTA */}
@@ -66,7 +68,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-foreground p-2 md:hidden"
+            className="p-2 text-foreground md:hidden"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -75,7 +77,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="border-border/50 animate-slide-in-right border-t py-4 md:hidden">
+          <div className="animate-slide-in-right border-t border-border/50 py-4 md:hidden">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
@@ -85,14 +87,14 @@ export function Header() {
                   className={cn(
                     "px-4 py-3 text-sm font-medium transition-colors",
                     pathname === link.href
-                      ? "text-foreground bg-secondary"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                      ? "bg-secondary text-foreground"
+                      : "text-muted-foreground hover:bg-secondary/50 hover:text-foreground"
                   )}
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="border-border/50 mt-2 border-t px-4 pt-4">
+              <div className="mt-2 border-t border-border/50 px-4 pt-4">
                 <Button variant="hero" className="w-full" asChild>
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     {siteConstants.cta.bookACall}

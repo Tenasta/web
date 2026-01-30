@@ -4,7 +4,7 @@ export const siteConstants: SiteConstants = {
   credentials: {
     heroLine1: "20+ years shipping products",
     heroLine2: "Drop-in technical co-pilot",
-    heroLine3: "Hands on leadership",
+    heroLine3: "Embedded, hands on leadership",
     yearsExperience: "20+ years",
     background: "startup and scale-up environments",
   },

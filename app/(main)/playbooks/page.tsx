@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BookOpen, Mail } from "lucide-react";
+import { BookOpen, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/shared/page-hero";
 import { Button } from "@/components/ui/button";
 import { siteConstants } from "@/lib/content";
@@ -33,19 +33,19 @@ export default function PlaybooksPage() {
             </h2>
 
             <p className="text-muted-foreground mb-8 text-lg">
-              I'm currently working on a collection of tactical playbooks covering topics like technical debt management, hiring your first engineer, and launching under pressure. Sign up below to be notified when they're ready.
+              I'm currently working on a collection of tactical playbooks covering topics like technical debt management, hiring your first engineer, and launching under pressure. In the meantime, let's talk about your specific challenges.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
-                <Link href={`mailto:${siteConstants.contact.email}?subject=Playbooks Interest`}>
-                  <Mail className="mr-2 h-4 w-4" />
-                  Get Notified
+                <Link href="/contact">
+                  {siteConstants.cta.discuss}
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link href="/ways-to-work-together">
-                  Explore Services
+                  Ways to Work Together
                 </Link>
               </Button>
             </div>
