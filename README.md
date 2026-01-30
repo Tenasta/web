@@ -1,7 +1,8 @@
 <div align="center">
-  <img src="public/images/tenasta-logo.png" alt="Tenasta" width="400" />
+  <img src="public/images/tenasta-logo.png" alt="Tenasta" width="200" />
 
-  <h3>Technical co-pilot for early-stage founders</h3>
+  <h3>Nick Martin-Kruck</h3>
+  <h4>Technical co-pilot for early-stage founders</h4>
 
   <p>
     I help founders ship and evolve real products when it counts – <br/>
