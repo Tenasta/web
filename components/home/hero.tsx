@@ -18,17 +18,9 @@ export function Hero() {
       <div className="container-wide relative z-10">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr,auto]">
           <div className="max-w-3xl">
-            {/* Status badge */}
-            <div className="fade-in-up mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1.5">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
-              <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                Available for Q1 engagements
-              </span>
-            </div>
-
-            {/* Headline with Avatar */}
+            {/* Headline with Avatar and Status */}
             <div
-              className="fade-in-up mb-6 flex items-center gap-4"
+              className="fade-in-up mb-6 flex flex-wrap items-center gap-4"
               style={{ animationDelay: "0.1s" }}
             >
               <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20 md:h-20 md:w-20">
@@ -40,12 +32,20 @@ export function Hero() {
                   priority
                 />
               </div>
-              <h1 className="text-md font-semibold leading-[1.1] tracking-tight md:text-xl lg:text-2xl">
-                Nick Martin-Kruck{" "}
-                <span className="leading-relaxed text-muted-foreground">
-                  {" · "} Fractional Technical Leader
-                </span>
-              </h1>
+              <div className="flex flex-col gap-2">
+                <h1 className="text-md font-semibold leading-[1.1] tracking-tight md:text-xl lg:text-2xl">
+                  Nick Martin-Kruck{" "}
+                  <span className="leading-relaxed text-muted-foreground">
+                    {" · "} Fractional Technical Leader
+                  </span>
+                </h1>
+                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1.5">
+                  <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
+                  <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                    Available for Q1 engagements
+                  </span>
+                </div>
+              </div>
             </div>
             <h2
               className="fade-in-up mb-6 text-4xl font-semibold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl"
