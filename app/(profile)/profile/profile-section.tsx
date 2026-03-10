@@ -21,26 +21,17 @@ export default function ProfileSection() {
           </p>
         </div>
         <div className="md:border-l-2 md:border-gray-300 md:pl-4 a4:ml-4 a4:pt-4 md:pt-0 text-gray-600">
-          <div className="flex flex-col gap-y-2 md:grid md:grid-cols-3 md:gap-x-2 md:gap-y-4 text-sm">
-            <div className="font-bold">Frontend</div>
-            <div className="md:col-span-2">React / Next.js</div>
-
-            <div className="font-bold">Backend</div>
-            <div className="md:col-span-2">Node.js / TypeScript</div>
-
-            <div className="font-bold">Database</div>
-            <div className="md:col-span-2">PostgreSQL / MySQL / NoSQL</div>
-
-            <div className="font-bold">Other</div>
-            <div className="md:col-span-2">
-              AWS / Docker / IaC / CI/CD
-            </div>
-
-            <div className="font-bold">How I work</div>
-            <div className="md:col-span-2">
-              Pragmatic, data-informed, collaborative, biased to ship and
-              iterate
-            </div>
+          <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm leading-6">
+            <span className="font-bold shrink-0">Frontend</span>
+            <span>React / Next.js</span>
+            <span className="font-bold shrink-0">Backend</span>
+            <span>Node.js / TypeScript</span>
+            <span className="font-bold shrink-0">Database</span>
+            <span>PostgreSQL / MySQL / NoSQL</span>
+            <span className="font-bold shrink-0">Other</span>
+            <span>AWS / Docker / IaC / CI/CD</span>
+            <span className="font-bold shrink-0">How I work</span>
+            <span>Pragmatic, data-informed, collaborative, biased to ship and iterate</span>
           </div>
         </div>
       </div>
