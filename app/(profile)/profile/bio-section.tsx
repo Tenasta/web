@@ -13,6 +13,8 @@ export default function BioSection() {
             className="inline-block h-24 w-24 rounded-full"
             src="/images/avatar.jpg"
             alt="Headshot of Nick"
+            width={96}
+            height={96}
           />
         </div>
         <div className="a4:text-left self-center text-center">

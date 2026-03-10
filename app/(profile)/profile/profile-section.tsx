@@ -22,17 +22,17 @@ export default function ProfileSection() {
           <div className="flex flex-col gap-y-2 md:grid md:grid-cols-3 md:gap-x-2 md:gap-y-4 text-sm">
             <div className="font-bold">Frontend</div>
             <div className="md:col-span-2">
-              React / Next / Vue / JS <p className="text-xs">(10+ years)</p>
+              React / Next.js
             </div>
             <div className="font-bold">Backend</div>
             <div className="md:col-span-2">
-              Node.js / TypeScript / PHP <p className="text-xs">(10+ years)</p>
+              Node.js / TypeScript 
             </div>
             <div className="font-bold">Database</div>
             <div className="md:col-span-2">PostgreSQL / MySQL / NoSQL</div>
             <div className="font-bold">Other</div>
             <div className="md:col-span-2">
-              AWS / Docker / Digital Ocean / IaC / CI/CD / gRPC / REST / GraphQL
+              AWS / Docker / IaC / CI/CD / gRPC / REST / GraphQL
             </div>
           </div>
         </div>

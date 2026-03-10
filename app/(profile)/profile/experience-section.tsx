@@ -1,14 +1,20 @@
-import { Fragment } from "react";
-
 const items = [
   {
     title: "Principal Engineer",
     date: "April 23 - Present",
     company: "Footium",
     location: "Remote",
+    stack: ["TypeScript", "Node.js", "AWS", "Terraform IaC", "PostgreSQL", "Next.js", "Python"],
+    focus: ["Technical Leadership", "System Architecture", "Product Delivery & Scaling", "Analytics, Data & telemetry"],
+    highlights: [
+      "Converted a credible seed prototype into a shipped & viable product supporting revenue and user growth.",
+      "Re-established engineering momentum with pragmatic IaC, CI/CD, observability, and clear operational ownership.",
+      "Led real-time backend services, revenue-driving features, and V2 migrations of critical systems.",
+      "Owned data & analytics foundations, building event-based product telemetry and revenue measurement tooling.",
+    ],
     description: [
-      "I came in to help a venture-backed startup move from a credible seed prototype to a shipped & viable product. Over ~3 years, I helped convert high ambition and accumulated complexity into repeatable execution and measurable outcomes: revenue growth, user growth, and strong retention; building momentum that supported a further fundraising round.",
-      "I re-established engineering momentum by introducing pragmatic foundations for sustainable delivery: multi-environment IaC, CI/CD, release management, observability, and clear operational ownership - enabling the team to ship with increasing cadence and confidence. I led platform and product systems to deliver real-time backend services at scale, revenue driving features, and V2 migrations of critical systems. I took responsibility for data & analytics foundations - building event-based product telemetry and revenue measurement tooling to improve decision making and business visibility. I partnered closely with founders through launch and delivery trade-offs to sustain a high-cadence ship/test/iterate loop without compromising production stability.",
+      "Ventured-backed startup role focused on turning high ambition and accumulated complexity into repeatable execution and measurable outcomes across revenue, user growth, and retention.",
+      "Partnered closely with founders to balance launch velocity with production stability in a sustained ship/test/iterate loop.",
     ],
   },
   {
@@ -16,8 +22,15 @@ const items = [
     date: "Feb 23 - April 23",
     company: "Glaciera",
     location: "Remote, Contract",
+    stack: ["Pulumi IaC", "AWS", "CloudWatch", "GitHub Actions", "CI/CD"],
+    highlights: [
+      "Modernised and stabilised existing infrastructure and CI/CD pipelines within a short engagement.",
+      "Implemented Pulumi-based IaC for AWS and integrated CloudWatch monitoring with Slack alerts.",
+      "Standardised GitHub Actions workflows to simplify deployments and source-control processes.",
+      "Reduced costs while increasing delivery velocity and system observability."
+    ],
     description: [
-      "A short project involving modernising and updating existing infrastructure and CI/CD pipeline. Using Pulumi IaC to orchestrate AWS Infrastructure. CloudWatch monitoring with slack integration for alerts. GitHub Actions was utilised to manage source control flows and deployment processes.",
+      "Short-term modernisation project focused on infrastructure, observability, and deployment workflows for an existing AWS setup.",
     ],
   },
   {
@@ -25,9 +38,15 @@ const items = [
     date: "Jul 22 - Jan 23",
     company: "Let's Do This",
     location: "London, Contract",
+    stack: ["Next.js", "GraphQL", "gRPC", "Node.js", "MongoDB"],
+    focus: ["Growth experimentation", "Product delivery", "Technical Leadership"],
+    highlights: [
+      "Technical lead in a growth team running data-led experiments to drive booking metrics.",
+      "Collaborated across teams to rapidly deliver core product functionality against a tight Q1 deadline.",
+      "Enabled key B2B sales and improved organiser satisfaction through timely delivery of platform features.",
+    ],
     description: [
-      "Tech lead working in a growth team on data-led experiments to drive booking metrics. Subsequently, after a business strategy adjustment our team shifted towards collaborating with other teams to rapidly build core product functionality - bringing expected delivery of the initiative to within the contractual deadline of Q1 start. This enabled key B2B sales and existing event organiser satisfaction.",
-      "I worked across several different microservices to deliver end to end functionality from end-user facing experiments/features to platform feature epics. Next.Js frontend <> GraphQL <> gRPC <> Node.JS microservices <> MongoDB.",
+      "Hands-on tech lead role spanning end-to-end delivery from user-facing experiments to platform epics across multiple services.",
     ],
   },
   {
@@ -35,9 +54,16 @@ const items = [
     date: "Oct 20 - Feb 22",
     company: "Glaciera",
     location: "London/Remote, Contract",
+    stack: ["PHP", "Vue", "AWS", "Stripe", "SPA"],
+    focus: ["SEO", "Analytics"],
+    highlights: [
+      "Turned around an underperforming offshore team working on a PHP/Vue/AWS codebase.",
+      "Refocused delivery on a core feature set to reduce costs and hit timelines.",
+      "Brought development in-house and successfully delivered an MVP SaaS product within budget for the jewellery sector.",
+      "Launched a subscription-based SaaS using Stripe, bespoke SPA & API, and analytics/SEO foundations.",
+    ],
     description: [
-      "As intertim tech lead I was brought in to lead (hands-on) an under performing offshore team working on a PHP/Vue/AWS codebase. Upon joining (after an extended period of missed deliveries and expanding costs) I focussed the team on a core set of features to enable a timely delivery and reduced costs.",
-      "Working closely with the founders on strategy/roadmap, we brought development in-house and successfully delivered an MVP SaaS product within budget to the Jewellery Business space using Stripe subscriptions/checkout. Bespoke SPA & API, SEO, Analytics, Stripe payments, GA dashboard.",
+      "Interim hands-on leadership role aligning roadmap, delivery focus, and team structure to recover a struggling project. I worked very closely with the founders to enable them to achieve their product vision while ensuring delivery of a viable product.",
     ],
   },
   {
@@ -45,8 +71,15 @@ const items = [
     date: "From Jun 20",
     company: "Tenasta Ltd",
     location: "London/Remote",
+    stack: ["TypeScript", "Next.js", "Node.js", "AWS", "AI LLM"],
+    focus: ["Technical Consulting", "Interim Leadership", "Hands-on Engineering", "System Design & Architecture"],
+    highlights: [
+      "Working closely with founders and business/technology leaders to quickly understand context and unblock teams/products.",
+      "Provided technology consulting, contract engineering, and interim leadership across multiple client codebases.",
+      "Delivered full-stack work primarily with React/Node/TypeScript in AWS environments.",
+    ],
     description: [
-      "Technology consulting, contract software engineering and interim leadership roles. Primarily working with React, Vue, Laravel and Node codebases in AWS/DO.",
+      "Ongoing consulting practice focused on web product delivery, technical strategy, and hands-on engineering.",
     ],
   },
   {
@@ -54,8 +87,16 @@ const items = [
     date: "Sept 17 - Apr 20",
     company: "Rush Partners Ltd",
     location: "London/Oslo/Malta",
+    stack: ["React", "Node.js", "Laravel", "AWS", "Docker", "CI/CD"],
+    focus: ["Technical Leadership", "Team Building", "Recruitment", "Process Design"],
+    highlights: [
+      "Built and led a 20+ person team across Engineering, Product, and Data after a merger.",
+      "Established recruitment processes, cross-functional teams, and professional development frameworks.",
+      "Developed a strong remote/hybrid engineering and product culture across multiple brands and projects.",
+    ],
     description: [
-      "Working directly with the group CEO & CTO following a merger I was tasked with building a product & technology team to work across several brands/projects in the business. I recruited and managed a team of 20+ across Engineering, Product and Data. Through establishing recruitment processes, cross-functional teams, professional development plans, internal processes etc. we built a strong remote/hybrid engineering & product culture.",
+      "Senior leadership role reporting to CEO/CTO in iGaming group, responsible for building and scaling a multi-brand product and technology organisation. The centralised technology team delivered solutions across multiple business units, brands and projects within the group.",
+      "In addition to leading the technology function I also contributed across several large initiatives including licensing applications, B2B services evaluation, acquisition and integration analysis and innovative new product development."
     ],
   },
   {
@@ -63,9 +104,14 @@ const items = [
     date: "Sept 17 - Apr 20",
     company: "FanTech",
     location: "London/Oslo/Malta",
+    stack: ["React", "Storybook", "Symfony", "AWS Fargate", "AWS Lambda", "Codeship"],
+    highlights: [
+      "Founded and built a B2B acquisition and engagement platform for the i-gaming/sports sector within the Rush group.",
+      "Delivered fantasy and free-to-play games as a plug-and-play JS widget for internal brands and external B2B clients.",
+      "Coordinated product development, compliance, and licensing to bring the platform to market.",
+    ],
     description: [
-      "In conjunction with my HoE role and within the Rush group I founded & built a B2B acquisition & engagement platform, for the i-gaming/sports sector. As a group company it was built initially to serve internal group brands, incorporating fantasy and free to play games before launching as an external B2B product. A PnP JS widget using React, Storybook, Codeship, Symfony backend/CMS on AWS fargate & lambda.",
-      "The role involved coordinating product development while ensuring compliance and leading applications for necessary industry licenses. Additionally, working internally to develop a B2B sales and marketing strategy for the product to go to market.",
+      "Co-founder role combining technical leadership, product strategy, and go-to-market responsibilities for a B2B platform.",
     ],
   },
   {
@@ -73,8 +119,15 @@ const items = [
     date: "Sept 13 - Sept 17",
     company: "FantasyBet",
     location: "Tromsø/Bristol/London",
+    stack: ["Laravel", "Vue", "AWS"],
+    focus: ["Co-founder", "Technical Leadership", "Product development"],
+    highlights: [
+      "Technical co-founder of an award-winning Fantasy Football platform (Best Fantasy Product 2015, Betting on Football Awards).",
+      "Built and evolved the product from early concept to a beloved platform with high user engagement.",
+      "Platform acquired by Rush Partners in 2017.",
+    ],
     description: [
-      "Technical co-founder of an award winning Fantasy Football platform (Best Fantasy product 2015 betting on football awards). We set out to revolutionise fantasy football - bringing daily, weekly and season long fantasy to Football fans. I built out the product as a solo engineer together with a digital agency creating a strong identity which football fans loved and kept coming back to. Acquired by Rush Partners in 2017",
+      "Co-founder role focused on building and scaling an innovative fantasy football experience across multiple formats.",
     ],
   },
   {
@@ -82,8 +135,14 @@ const items = [
     date: "Sept 13 - Apr 14",
     company: "Eagle Eye Solutions",
     location: "Guildford",
+    stack: ["PHP", "JavaScript"],
+    focus: ["Retail voucher platforms"],
+    highlights: [
+      "Contributed to AIR and Core services platforms in a fast-paced agile environment.",
+      "Supported rapid business growth from ~15 to 50+ employees, through IPO and acquisition stages.",
+    ],
     description: [
-      "Working in a fast paced agile development environment on the AIR and Core services platforms. Using PHP and JavaScript to create a unique product in the retail voucher, coupon and loyalty space. The business grew from ~15 to 50+ in a year, with an IPO and acquisition along the way.",
+      "Early-career engineering role building a unique product in the retail voucher, coupon, and loyalty space.",
     ],
   },
   {
@@ -91,34 +150,66 @@ const items = [
     date: "Sept 10 - Apr 13",
     company: "Sound in Theory",
     location: "Exeter",
+    stack: [".NET", "PHP", "JavaScript"],
+    focus: ["SEO"],
+    highlights: [
+      "Worked across web design, development, SEO, and identity in a creative digital agency.",
+      "Owned phases of the SDLC and delivered solutions for varied business and project demands.",
+    ],
     description: [
-      "Working in a creative digital agency specialising in web design, development, SEO and identity - contributing at every stage and in owning phases of the SDLC. Using .NET, PHP, JavaScript and other technologies to solve varied business and project demands.",
+      "Agency role providing broad exposure to web technologies, client-facing delivery, and end-to-end project work.",
     ],
   },
 ];
 export default function ExperienceSection() {
   return (
-    <section className="experience py-6  border-b-2 border-gray-300">
+    <section className="pb-4 md:pt-6 md:pb-6 border-b-2 border-gray-300">
       <h3 className="uppercase font-bold text-xl mb-4">Experience</h3>
-      <div className="grid grid-cols-4 gap-x-2 gap-y-8">
+      <div className="space-y-6">
         {items.map((item, index) => (
-          <Fragment key={index}>
-            <div>
-              <h4 className="text-sm mb-2">{item.title}</h4>
-              <p className="">{item.date}</p>
+          <div
+            key={index}
+            className="border-b border-gray-200 pb-6 last:border-0"
+          >
+            <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
+              <div>
+                <h4 className="text-base font-bold text-gray-900">
+                  {item.title} | {item.company}
+                </h4>
+              </div>
+              <p className="mt-1 text-sm text-gray-600 md:mt-0">
+                {item.date}
+              </p>
             </div>
-            <div>
-              <h4 className="mb-2">{item.company}</h4>
-              <p className="text-xs">({item.location})</p>
-            </div>
-            <div className="details col-span-2">
-              {item.description.map((desc, i) => (
-                <p className="" key={i}>
-                  {desc}
-                </p>
-              ))}
-            </div>
-          </Fragment>
+            {(item.stack?.length || 0) + (item.focus?.length || 0) > 0 && (
+              <div className="mt-2 flex flex-col gap-1 text-sm text-gray-600 md:flex-row md:flex-wrap md:gap-x-4">
+                {item.stack && item.stack.length > 0 && (
+                  <p>
+                    <span className="font-semibold">Tech:</span>{" "}
+                    {item.stack.join(" · ")}
+                  </p>
+                )}
+                {item.focus && item.focus.length > 0 && (
+                  <p>
+                    <span className="font-semibold">Focus:</span>{" "}
+                    {item.focus.join(" · ")}
+                  </p>
+                )}
+              </div>
+            )}
+            {item.highlights && item.highlights.length > 0 && (
+              <ul className="mt-3 list-disc pl-5 leading-7 space-y-1 text-gray-600">
+                {item.highlights.map((highlight, i) => (
+                  <li key={i}>{highlight}</li>
+                ))}
+              </ul>
+            )}
+            {item.description.map((desc, i) => (
+              <p className="mt-4 leading-7 text-gray-600" key={i}>
+                {desc}
+              </p>
+            ))}
+          </div>
         ))}
       </div>
     </section>
