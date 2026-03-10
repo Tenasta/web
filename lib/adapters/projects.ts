@@ -5,9 +5,7 @@ import { PROJECT_CATEGORIES } from "@/lib/content/categories";
  * Transforms full project data into preview format for home page
  * Filters by featured flag and transforms to preview format
  */
-export function toProjectsPreview(
-  projects: Project[]
-): ProjectPreview[] {
+export function toProjectsPreview(projects: Project[]): ProjectPreview[] {
   return projects
     .filter((p) => p.featured === true)
     .map((project) => ({

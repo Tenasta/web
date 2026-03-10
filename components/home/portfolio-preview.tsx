@@ -46,7 +46,7 @@ export function PortfolioPreview() {
                     {project.categories.map((category) => (
                       <span
                         key={category}
-                        className="px-1.5 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-primary/10 text-primary rounded"
+                        className="rounded bg-primary/10 px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-primary"
                       >
                         {category}
                       </span>

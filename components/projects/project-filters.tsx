@@ -22,7 +22,7 @@ export function ProjectFilters({
   return (
     <div className="mb-12">
       {/* Filter chips */}
-      <div className="flex justify-center mb-6">
+      <div className="mb-6 flex justify-center">
         <div
           className="flex flex-wrap justify-center gap-2 px-4"
           role="tablist"
@@ -50,7 +50,7 @@ export function ProjectFilters({
                 role="tab"
                 aria-selected={isActive}
                 aria-controls="projects-grid"
-                className="font-mono text-xs uppercase tracking-wider whitespace-nowrap"
+                className="whitespace-nowrap font-mono text-xs uppercase tracking-wider"
               >
                 {category}
               </Button>
@@ -62,12 +62,12 @@ export function ProjectFilters({
       {/* Description + count */}
       <div
         key={activeCategory}
-        className="max-w-3xl mx-auto px-4 text-center animate-fade-slide-in"
+        className="animate-fade-slide-in mx-auto max-w-3xl px-4 text-center"
       >
-        <p className="text-muted-foreground leading-relaxed mb-2">
+        <p className="mb-2 leading-relaxed text-muted-foreground">
           {description}
         </p>
-        <p className="text-sm font-mono text-primary">
+        <p className="font-mono text-sm text-primary">
           Showing {projectCount} {projectCount === 1 ? "project" : "projects"}
         </p>
       </div>

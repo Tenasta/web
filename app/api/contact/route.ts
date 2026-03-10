@@ -87,8 +87,15 @@ export async function POST(request: Request) {
       errorMessage = error.message;
 
       // Check if this is a Brevo API error with response details
-      if ('response' in error && error.response && typeof error.response === 'object') {
-        const response = error.response as { body?: { message?: string }; statusCode?: number };
+      if (
+        "response" in error &&
+        error.response &&
+        typeof error.response === "object"
+      ) {
+        const response = error.response as {
+          body?: { message?: string };
+          statusCode?: number;
+        };
         if (response.body?.message) {
           errorMessage = response.body.message;
         }
@@ -98,9 +105,6 @@ export async function POST(request: Request) {
       }
     }
 
-    return NextResponse.json(
-      { error: errorMessage },
-      { status: statusCode }
-    );
+    return NextResponse.json({ error: errorMessage }, { status: statusCode });
   }
 }

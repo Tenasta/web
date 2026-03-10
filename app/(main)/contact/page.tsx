@@ -143,8 +143,8 @@ export default function ContactPage() {
             {submitStatus === "success" && (
               <div className="mb-6 rounded-lg border border-green-200 bg-green-50 p-4 text-green-800">
                 <p className="font-semibold">
-                  Thanks{submittedName ? ` ${submittedName}` : ""}, your message was sent
-                  successfully!
+                  Thanks{submittedName ? ` ${submittedName}` : ""}, your message
+                  was sent successfully!
                 </p>
                 <p className="text-sm">
                   We will get back to you as soon as possible.

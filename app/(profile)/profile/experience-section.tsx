@@ -4,8 +4,21 @@ const items = [
     date: "April 23 - Present",
     company: "Footium",
     location: "Remote",
-    stack: ["TypeScript", "Node.js", "AWS", "Terraform IaC", "PostgreSQL", "Next.js", "Python"],
-    focus: ["Technical Leadership", "System Architecture", "Product Delivery & Scaling", "Analytics, Data & telemetry"],
+    stack: [
+      "TypeScript",
+      "Node.js",
+      "AWS",
+      "Terraform IaC",
+      "PostgreSQL",
+      "Next.js",
+      "Python",
+    ],
+    focus: [
+      "Technical Leadership",
+      "System Architecture",
+      "Product Delivery & Scaling",
+      "Analytics, Data & telemetry",
+    ],
     highlights: [
       "Converted a credible seed prototype into a shipped & viable product supporting revenue and user growth.",
       "Re-established engineering momentum with pragmatic IaC, CI/CD, observability, and clear operational ownership.",
@@ -27,7 +40,7 @@ const items = [
       "Modernised and stabilised existing infrastructure and CI/CD pipelines within a short engagement.",
       "Implemented Pulumi-based IaC for AWS and integrated CloudWatch monitoring with Slack alerts.",
       "Standardised GitHub Actions workflows to simplify deployments and source-control processes.",
-      "Reduced costs while increasing delivery velocity and system observability."
+      "Reduced costs while increasing delivery velocity and system observability.",
     ],
     description: [
       "Short-term modernisation project focused on infrastructure, observability, and deployment workflows for an existing AWS setup.",
@@ -39,7 +52,11 @@ const items = [
     company: "Let's Do This",
     location: "London, Contract",
     stack: ["Next.js", "GraphQL", "gRPC", "Node.js", "MongoDB"],
-    focus: ["Growth experimentation", "Product delivery", "Technical Leadership"],
+    focus: [
+      "Growth experimentation",
+      "Product delivery",
+      "Technical Leadership",
+    ],
     highlights: [
       "Technical lead in a growth team running data-led experiments to drive booking metrics.",
       "Collaborated across teams to rapidly deliver core product functionality against a tight Q1 deadline.",
@@ -72,7 +89,12 @@ const items = [
     company: "Tenasta Ltd",
     location: "London/Remote",
     stack: ["TypeScript", "Next.js", "Node.js", "AWS", "AI LLM"],
-    focus: ["Technical Consulting", "Interim Leadership", "Hands-on Engineering", "System Design & Architecture"],
+    focus: [
+      "Technical Consulting",
+      "Interim Leadership",
+      "Hands-on Engineering",
+      "System Design & Architecture",
+    ],
     highlights: [
       "Working closely with founders and business/technology leaders to quickly understand context and unblock teams/products.",
       "Provided technology consulting, contract engineering, and interim leadership across multiple client codebases.",
@@ -88,7 +110,12 @@ const items = [
     company: "Rush Partners Ltd",
     location: "London/Oslo/Malta",
     stack: ["React", "Node.js", "Laravel", "AWS", "Docker", "CI/CD"],
-    focus: ["Technical Leadership", "Team Building", "Recruitment", "Process Design"],
+    focus: [
+      "Technical Leadership",
+      "Team Building",
+      "Recruitment",
+      "Process Design",
+    ],
     highlights: [
       "Built and led a 20+ person team across Engineering, Product, and Data after a merger.",
       "Established recruitment processes, cross-functional teams, and professional development frameworks.",
@@ -96,7 +123,7 @@ const items = [
     ],
     description: [
       "Senior leadership role reporting to CEO/CTO in iGaming group, responsible for building and scaling a multi-brand product and technology organisation. The centralised technology team delivered solutions across multiple business units, brands and projects within the group.",
-      "In addition to leading the technology function I also contributed across several large initiatives including licensing applications, B2B services evaluation, acquisition and integration analysis and innovative new product development."
+      "In addition to leading the technology function I also contributed across several large initiatives including licensing applications, B2B services evaluation, acquisition and integration analysis and innovative new product development.",
     ],
   },
   {
@@ -104,7 +131,14 @@ const items = [
     date: "Sept 17 - Apr 20",
     company: "FanTech",
     location: "London/Oslo/Malta",
-    stack: ["React", "Storybook", "Symfony", "AWS Fargate", "AWS Lambda", "Codeship"],
+    stack: [
+      "React",
+      "Storybook",
+      "Symfony",
+      "AWS Fargate",
+      "AWS Lambda",
+      "Codeship",
+    ],
     highlights: [
       "Founded and built a B2B acquisition and engagement platform for the i-gaming/sports sector within the Rush group.",
       "Delivered fantasy and free-to-play games as a plug-and-play JS widget for internal brands and external B2B clients.",
@@ -163,8 +197,8 @@ const items = [
 ];
 export default function ExperienceSection() {
   return (
-    <section className="pb-4 md:pt-6 md:pb-6 border-b-2 border-gray-300">
-      <h3 className="uppercase font-bold text-xl mb-4">Experience</h3>
+    <section className="border-b-2 border-gray-300 pb-4 md:pb-6 md:pt-6">
+      <h3 className="mb-4 text-xl font-bold uppercase">Experience</h3>
       <div className="space-y-6">
         {items.map((item, index) => (
           <div
@@ -177,9 +211,7 @@ export default function ExperienceSection() {
                   {item.title} | {item.company}
                 </h4>
               </div>
-              <p className="mt-1 text-sm text-gray-600 md:mt-0">
-                {item.date}
-              </p>
+              <p className="mt-1 text-sm text-gray-600 md:mt-0">{item.date}</p>
             </div>
             {(item.stack?.length || 0) + (item.focus?.length || 0) > 0 && (
               <div className="mt-2 flex flex-col gap-1 text-sm text-gray-600 md:flex-row md:flex-wrap md:gap-x-4">
@@ -198,7 +230,7 @@ export default function ExperienceSection() {
               </div>
             )}
             {item.highlights && item.highlights.length > 0 && (
-              <ul className="mt-3 list-disc pl-5 leading-7 space-y-1 text-gray-600">
+              <ul className="mt-3 list-disc space-y-1 pl-5 leading-7 text-gray-600">
                 {item.highlights.map((highlight, i) => (
                   <li key={i}>{highlight}</li>
                 ))}

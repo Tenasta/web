@@ -29,22 +29,22 @@ a {
   @apply text-blue-400 underline;
 }
 .profile-container {
-  @apply max-w-5xl mx-auto py-12;
+  @apply mx-auto max-w-5xl py-12;
 }
 
 @media print {
   .profile-container {
-    @apply max-w-none mx-0 p-0;
+    @apply mx-0 max-w-none p-0;
   }
 }
 
 .profile-section {
-  @apply px-6 drop-shadow-2xl bg-gray-50 border border-gray-100;
+  @apply border border-gray-100 bg-gray-50 px-6 drop-shadow-2xl;
 }
 
 @media print {
   .profile-section {
-    @apply drop-shadow-none bg-white border-none;
+    @apply border-none bg-white drop-shadow-none;
     padding: 1rem 4rem !important;
     height: 100vh !important;
   }
@@ -56,7 +56,7 @@ a {
 
 @media print {
   .experience .grid > div {
-    @apply pt-4 gap-x-0;
+    @apply gap-x-0 pt-4;
   }
 
   .experience h3 {

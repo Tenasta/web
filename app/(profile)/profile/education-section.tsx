@@ -1,8 +1,8 @@
 export default function EducationSection() {
   return (
-    <section className="py-6 grid grid-cols-4 gap-x-4 gap-y-8">
+    <section className="grid grid-cols-4 gap-x-4 gap-y-8 py-6">
       <div>
-        <h3 className="uppercase font-bold text-xl mb-4">Education</h3>
+        <h3 className="mb-4 text-xl font-bold uppercase">Education</h3>
       </div>
       <div>
         <h4 className="mb-2">2009 - 2010</h4>

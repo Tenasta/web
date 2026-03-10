@@ -18,15 +18,15 @@ export function PageCTA({
   variant = "default",
 }: PageCTAProps) {
   return (
-    <section className="py-20 bg-card">
+    <section className="bg-card py-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">{title}</h2>
-          <p className="text-muted-foreground mb-8">{description}</p>
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="mb-4 text-2xl font-semibold md:text-3xl">{title}</h2>
+          <p className="mb-8 text-muted-foreground">{description}</p>
           <Button variant={variant} size="lg" asChild>
             <Link href={buttonHref}>
               {buttonText}
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>

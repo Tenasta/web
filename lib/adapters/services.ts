@@ -4,9 +4,7 @@ import type { Service, ServicePreview } from "@/lib/types";
  * Transforms full service data into preview format for home page
  * Maps whatYouGet → deliverables (first 5 items)
  */
-export function toServicesPreview(
-  services: Service[]
-): ServicePreview[] {
+export function toServicesPreview(services: Service[]): ServicePreview[] {
   return services.map((service) => ({
     id: service.id,
     icon: service.icon,
